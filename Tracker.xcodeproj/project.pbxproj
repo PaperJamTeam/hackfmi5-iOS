@@ -26,11 +26,12 @@
 		939D96261AEB7BDE00BFDC21 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96251AEB7BDE00BFDC21 /* libz.dylib */; };
 		939D96281AEB7BE300BFDC21 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96271AEB7BE300BFDC21 /* libc++.dylib */; };
 		939D962A1AEB7BF000BFDC21 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96291AEB7BF000BFDC21 /* libxml2.dylib */; };
+		F83D80961AEBC04800F31961 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D80951AEBC04800F31961 /* CoreDataManager.m */; };
+		F83D809C1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F83D809A1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld */; };
 		F8AA15CE1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */; };
 		F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */; };
 		F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D31AEBC2D700DFD241 /* NSArray+PureLayout.m */; };
 		F8AA15DB1AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D51AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m */; };
-		F8AA161A1AEBC2D700DFD241 /* TrackerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8AA16181AEBC2D700DFD241 /* TrackerDataModel.xcdatamodeld */; };
 		F8C9A0FF1AEBC0A9003CD6C9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C9A0F51AEBC0A9003CD6C9 /* Bolts.framework */; };
 		F8C9A1001AEBC0A9003CD6C9 /* FacebookSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8C9A0F61AEBC0A9003CD6C9 /* FacebookSDK.strings */; };
 		F8C9A1011AEBC0A9003CD6C9 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C9A0F71AEBC0A9003CD6C9 /* FBAudienceNetwork.framework */; };
@@ -81,6 +82,9 @@
 		939D96251AEB7BDE00BFDC21 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		939D96271AEB7BE300BFDC21 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		939D96291AEB7BF000BFDC21 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		F83D80941AEBC04800F31961 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "\U0010CoreDataManager.h"; path = "CoreData/\U0010CoreDataManager.h"; sourceTree = "<group>"; };
+		F83D80951AEBC04800F31961 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "\U0010CoreDataManager.m"; path = "CoreData/\U0010CoreDataManager.m"; sourceTree = "<group>"; };
+		F83D809B1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackerDataModel.xcdatamodel; sourceTree = "<group>"; };
 		F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = Libraries/Maply/WhirlyGlobeMaplyComponent.framework; sourceTree = SOURCE_ROOT; };
 		F8AA15D01AEBC2D700DFD241 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "Libraries/PureLayout/ALView+PureLayout.h"; sourceTree = SOURCE_ROOT; };
 		F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "Libraries/PureLayout/ALView+PureLayout.m"; sourceTree = SOURCE_ROOT; };
@@ -91,7 +95,6 @@
 		F8AA15D61AEBC2D700DFD241 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = Libraries/PureLayout/PureLayout.h; sourceTree = SOURCE_ROOT; };
 		F8AA15D71AEBC2D700DFD241 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "Libraries/PureLayout/PureLayout+Internal.h"; sourceTree = SOURCE_ROOT; };
 		F8AA15D81AEBC2D700DFD241 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = Libraries/PureLayout/PureLayoutDefines.h; sourceTree = SOURCE_ROOT; };
-		F8AA16191AEBC2D700DFD241 /* TrackerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackerDataModel.xcdatamodel; sourceTree = "<group>"; };
 		F8C9A0F51AEBC0A9003CD6C9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Libraries/FacebookSDK/Bolts.framework; sourceTree = SOURCE_ROOT; };
 		F8C9A0F61AEBC0A9003CD6C9 /* FacebookSDK.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = FacebookSDK.strings; path = Libraries/FacebookSDK/FacebookSDK.strings; sourceTree = SOURCE_ROOT; };
 		F8C9A0F71AEBC0A9003CD6C9 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = Libraries/FacebookSDK/FBAudienceNetwork.framework; sourceTree = SOURCE_ROOT; };
@@ -222,6 +225,7 @@
 				939D96031AEB7B4000BFDC21 /* Images.xcassets */,
 				939D96051AEB7B4000BFDC21 /* LaunchScreen.xib */,
 				938D59481AEB8FB9008A2A49 /* UI */,
+				F83D80931AEBC01F00F31961 /* CoreData */,
 				939D962B1AEB7F0000BFDC21 /* Resources */,
 				939D95F31AEB7B4000BFDC21 /* Supporting Files */,
 			);
@@ -233,7 +237,6 @@
 			children = (
 				939D95F41AEB7B4000BFDC21 /* Info.plist */,
 				939D95F51AEB7B4000BFDC21 /* main.m */,
-				F8AA16181AEBC2D700DFD241 /* TrackerDataModel.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -273,6 +276,16 @@
 				938D59431AEB8B56008A2A49 /* geojson */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		F83D80931AEBC01F00F31961 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F83D80941AEBC04800F31961 /* CoreDataManager.h */,
+				F83D80951AEBC04800F31961 /* CoreDataManager.m */,
+				F83D809A1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		F8AA15CC1AEBC29600DFD241 /* Maply */ = {
@@ -428,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F83D809C1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld in Sources */,
 				938D595E1AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				F8AA15DB1AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */,
@@ -435,7 +449,7 @@
 				F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */,
 				938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */,
 				938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */,
-				F8AA161A1AEBC2D700DFD241 /* TrackerDataModel.xcdatamodeld in Sources */,
+				F83D80961AEBC04800F31961 /* CoreDataManager.m in Sources */,
 				938D595D1AEB90F5008A2A49 /* NSArray+PureLayout.m in Sources */,
 				F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */,
 				939D95F61AEB7B4000BFDC21 /* main.m in Sources */,
@@ -671,13 +685,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F8AA16181AEBC2D700DFD241 /* TrackerDataModel.xcdatamodeld */ = {
+		F83D809A1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F8AA16191AEBC2D700DFD241 /* TrackerDataModel.xcdatamodel */,
+				F83D809B1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodel */,
 			);
-			currentVersion = F8AA16191AEBC2D700DFD241 /* TrackerDataModel.xcdatamodel */;
-			path = TrackerDataModel.xcdatamodeld;
+			currentVersion = F83D809B1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodel */;
+			name = TrackerDataModel.xcdatamodeld;
+			path = CoreData/TrackerDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
