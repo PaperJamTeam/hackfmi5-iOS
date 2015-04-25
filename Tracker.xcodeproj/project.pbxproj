@@ -8,14 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		93072EBE1AEB9E7500E2996E /* map.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EBD1AEB9E7500E2996E /* map.mbtiles */; };
-		938D59421AEB86BA008A2A49 /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 938D59411AEB86BA008A2A49 /* geography-class_medres.mbtiles */; };
-		938D59471AEB8CFD008A2A49 /* bulgaria.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 938D59461AEB8CFD008A2A49 /* bulgaria.geojson */; };
 		938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594B1AEB8FCD008A2A49 /* FirstViewController.m */; };
 		938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594D1AEB8FCD008A2A49 /* SecondViewController.m */; };
 		938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59541AEB90F5008A2A49 /* ALView+PureLayout.m */; };
 		938D595D1AEB90F5008A2A49 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59561AEB90F5008A2A49 /* NSArray+PureLayout.m */; };
 		938D595E1AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59581AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.m */; };
-		938D59611AEB9181008A2A49 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D59601AEB9181008A2A49 /* WhirlyGlobeMaplyComponent.framework */; };
 		939D95F61AEB7B4000BFDC21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F51AEB7B4000BFDC21 /* main.m */; };
 		939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F81AEB7B4000BFDC21 /* AppDelegate.m */; };
 		939D96021AEB7B4000BFDC21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939D96001AEB7B4000BFDC21 /* Main.storyboard */; };
@@ -28,6 +25,10 @@
 		939D96281AEB7BE300BFDC21 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96271AEB7BE300BFDC21 /* libc++.dylib */; };
 		939D962A1AEB7BF000BFDC21 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96291AEB7BF000BFDC21 /* libxml2.dylib */; };
 		939D962D1AEB7F0E00BFDC21 /* test.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 939D962C1AEB7F0E00BFDC21 /* test.mbtiles */; };
+		F8AA15CE1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */; };
+		F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */; };
+		F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D31AEBC2D700DFD241 /* NSArray+PureLayout.m */; };
+		F8AA15DB1AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D51AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m */; };
 		F8C9A0FF1AEBC0A9003CD6C9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C9A0F51AEBC0A9003CD6C9 /* Bolts.framework */; };
 		F8C9A1001AEBC0A9003CD6C9 /* FacebookSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8C9A0F61AEBC0A9003CD6C9 /* FacebookSDK.strings */; };
 		F8C9A1011AEBC0A9003CD6C9 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C9A0F71AEBC0A9003CD6C9 /* FBAudienceNetwork.framework */; };
@@ -58,16 +59,9 @@
 		938D594B1AEB8FCD008A2A49 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = UI/ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
 		938D594C1AEB8FCD008A2A49 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = UI/ViewControllers/SecondViewController.h; sourceTree = "<group>"; };
 		938D594D1AEB8FCD008A2A49 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = UI/ViewControllers/SecondViewController.m; sourceTree = "<group>"; };
-		938D59531AEB90F5008A2A49 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "Libraries/PureLayout/ALView+PureLayout.h"; sourceTree = SOURCE_ROOT; };
 		938D59541AEB90F5008A2A49 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "Libraries/PureLayout/ALView+PureLayout.m"; sourceTree = SOURCE_ROOT; };
-		938D59551AEB90F5008A2A49 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "Libraries/PureLayout/NSArray+PureLayout.h"; sourceTree = SOURCE_ROOT; };
 		938D59561AEB90F5008A2A49 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "Libraries/PureLayout/NSArray+PureLayout.m"; sourceTree = SOURCE_ROOT; };
-		938D59571AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "Libraries/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = SOURCE_ROOT; };
 		938D59581AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "Libraries/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = SOURCE_ROOT; };
-		938D59591AEB90F5008A2A49 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = Libraries/PureLayout/PureLayout.h; sourceTree = SOURCE_ROOT; };
-		938D595A1AEB90F5008A2A49 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "Libraries/PureLayout/PureLayout+Internal.h"; sourceTree = SOURCE_ROOT; };
-		938D595B1AEB90F5008A2A49 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = Libraries/PureLayout/PureLayoutDefines.h; sourceTree = SOURCE_ROOT; };
-		938D59601AEB9181008A2A49 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = Libraries/Maply/WhirlyGlobeMaplyComponent.framework; sourceTree = SOURCE_ROOT; };
 		939D95F01AEB7B4000BFDC21 /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939D95F41AEB7B4000BFDC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939D95F51AEB7B4000BFDC21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +79,16 @@
 		939D96271AEB7BE300BFDC21 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		939D96291AEB7BF000BFDC21 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		939D962C1AEB7F0E00BFDC21 /* test.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.mbtiles; path = Resources/test.mbtiles; sourceTree = SOURCE_ROOT; };
+		F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = Libraries/Maply/WhirlyGlobeMaplyComponent.framework; sourceTree = SOURCE_ROOT; };
+		F8AA15D01AEBC2D700DFD241 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "Libraries/PureLayout/ALView+PureLayout.h"; sourceTree = SOURCE_ROOT; };
+		F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "Libraries/PureLayout/ALView+PureLayout.m"; sourceTree = SOURCE_ROOT; };
+		F8AA15D21AEBC2D700DFD241 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "Libraries/PureLayout/NSArray+PureLayout.h"; sourceTree = SOURCE_ROOT; };
+		F8AA15D31AEBC2D700DFD241 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "Libraries/PureLayout/NSArray+PureLayout.m"; sourceTree = SOURCE_ROOT; };
+		F8AA15D41AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "Libraries/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = SOURCE_ROOT; };
+		F8AA15D51AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "Libraries/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = SOURCE_ROOT; };
+		F8AA15D61AEBC2D700DFD241 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = Libraries/PureLayout/PureLayout.h; sourceTree = SOURCE_ROOT; };
+		F8AA15D71AEBC2D700DFD241 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "Libraries/PureLayout/PureLayout+Internal.h"; sourceTree = SOURCE_ROOT; };
+		F8AA15D81AEBC2D700DFD241 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = Libraries/PureLayout/PureLayoutDefines.h; sourceTree = SOURCE_ROOT; };
 		F8C9A0F51AEBC0A9003CD6C9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Libraries/FacebookSDK/Bolts.framework; sourceTree = SOURCE_ROOT; };
 		F8C9A0F61AEBC0A9003CD6C9 /* FacebookSDK.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = FacebookSDK.strings; path = Libraries/FacebookSDK/FacebookSDK.strings; sourceTree = SOURCE_ROOT; };
 		F8C9A0F71AEBC0A9003CD6C9 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = Libraries/FacebookSDK/FBAudienceNetwork.framework; sourceTree = SOURCE_ROOT; };
@@ -107,8 +111,8 @@
 				F8C9A1041AEBC0A9003CD6C9 /* FBSDKLoginKit.framework in Frameworks */,
 				939D96261AEB7BDE00BFDC21 /* libz.dylib in Frameworks */,
 				939D96241AEB7BDB00BFDC21 /* libsqlite3.dylib in Frameworks */,
+				F8AA15CE1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework in Frameworks */,
 				939D96221AEB7BD600BFDC21 /* CoreLocation.framework in Frameworks */,
-				939D96201AEB7BD000BFDC21 /* WhirlyGlobeMaplyComponent.framework in Frameworks */,
 				F8C9A0FF1AEBC0A9003CD6C9 /* Bolts.framework in Frameworks */,
 				F8C9A1061AEBC0A9003CD6C9 /* FBSDKShareKit.framework in Frameworks */,
 				F8C9A1031AEBC0A9003CD6C9 /* FBSDKCoreKit.framework in Frameworks */,
@@ -168,35 +172,6 @@
 			children = (
 			);
 			name = Nibs;
-			sourceTree = "<group>";
-		};
-		938D59521AEB90E4008A2A49 /* PureLayout */ = {
-			isa = PBXGroup;
-			children = (
-				938D59531AEB90F5008A2A49 /* ALView+PureLayout.h */,
-				938D59541AEB90F5008A2A49 /* ALView+PureLayout.m */,
-				938D59551AEB90F5008A2A49 /* NSArray+PureLayout.h */,
-				938D59561AEB90F5008A2A49 /* NSArray+PureLayout.m */,
-				938D59571AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.h */,
-				938D59581AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.m */,
-				938D59591AEB90F5008A2A49 /* PureLayout.h */,
-				938D595A1AEB90F5008A2A49 /* PureLayout+Internal.h */,
-				938D595B1AEB90F5008A2A49 /* PureLayoutDefines.h */,
-			);
-			name = PureLayout;
-			sourceTree = "<group>";
-		};
-		938D595F1AEB9178008A2A49 /* Maply */ = {
-			isa = PBXGroup;
-			children = (
-				939D96291AEB7BF000BFDC21 /* libxml2.dylib */,
-				939D96271AEB7BE300BFDC21 /* libc++.dylib */,
-				939D96251AEB7BDE00BFDC21 /* libz.dylib */,
-				939D96231AEB7BDB00BFDC21 /* libsqlite3.dylib */,
-				939D96211AEB7BD600BFDC21 /* CoreLocation.framework */,
-				938D59601AEB9181008A2A49 /* WhirlyGlobeMaplyComponent.framework */,
-			);
-			name = Maply;
 			sourceTree = "<group>";
 		};
 		939D95E71AEB7B4000BFDC21 = {
@@ -262,13 +237,9 @@
 		939D961C1AEB7B5600BFDC21 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F8AA15CF1AEBC2C100DFD241 /* PureLayout */,
+				F8AA15CC1AEBC29600DFD241 /* Maply */,
 				F8C9A0DA1AEBA373003CD6C9 /* FacebookSDK */,
-				939D96291AEB7BF000BFDC21 /* libxml2.dylib */,
-				939D96271AEB7BE300BFDC21 /* libc++.dylib */,
-				939D96251AEB7BDE00BFDC21 /* libz.dylib */,
-				939D96231AEB7BDB00BFDC21 /* libsqlite3.dylib */,
-				939D96211AEB7BD600BFDC21 /* CoreLocation.framework */,
-				939D961F1AEB7BD000BFDC21 /* WhirlyGlobeMaplyComponent.framework */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -282,6 +253,35 @@
 				939D962C1AEB7F0E00BFDC21 /* test.mbtiles */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		F8AA15CC1AEBC29600DFD241 /* Maply */ = {
+			isa = PBXGroup;
+			children = (
+				F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */,
+				939D96291AEB7BF000BFDC21 /* libxml2.dylib */,
+				939D96271AEB7BE300BFDC21 /* libc++.dylib */,
+				939D96251AEB7BDE00BFDC21 /* libz.dylib */,
+				939D96231AEB7BDB00BFDC21 /* libsqlite3.dylib */,
+				939D96211AEB7BD600BFDC21 /* CoreLocation.framework */,
+			);
+			name = Maply;
+			sourceTree = "<group>";
+		};
+		F8AA15CF1AEBC2C100DFD241 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				F8AA15D01AEBC2D700DFD241 /* ALView+PureLayout.h */,
+				F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */,
+				F8AA15D21AEBC2D700DFD241 /* NSArray+PureLayout.h */,
+				F8AA15D31AEBC2D700DFD241 /* NSArray+PureLayout.m */,
+				F8AA15D41AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.h */,
+				F8AA15D51AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m */,
+				F8AA15D61AEBC2D700DFD241 /* PureLayout.h */,
+				F8AA15D71AEBC2D700DFD241 /* PureLayout+Internal.h */,
+				F8AA15D81AEBC2D700DFD241 /* PureLayoutDefines.h */,
+			);
+			name = PureLayout;
 			sourceTree = "<group>";
 		};
 		F8C9A0DA1AEBA373003CD6C9 /* FacebookSDK */ = {
@@ -408,11 +408,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				938D595E1AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				F8AA15DB1AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */,
 				939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */,
+				F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */,
 				938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */,
 				938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */,
 				938D595D1AEB90F5008A2A49 /* NSArray+PureLayout.m in Sources */,
+				F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */,
 				939D95F61AEB7B4000BFDC21 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +556,7 @@
 					/Users/ivokanchev/Downloads/WhirlyGlobe_Maply_Distribution_2_3,
 					"$(PROJECT_DIR)/Libraries",
 					"$(PROJECT_DIR)/Libraries/FacebookSDK",
+					"$(PROJECT_DIR)/Libraries/Maply",
 				);
 				INFOPLIST_FILE = Tracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -570,6 +574,7 @@
 					/Users/ivokanchev/Downloads/WhirlyGlobe_Maply_Distribution_2_3,
 					"$(PROJECT_DIR)/Libraries",
 					"$(PROJECT_DIR)/Libraries/FacebookSDK",
+					"$(PROJECT_DIR)/Libraries/Maply",
 				);
 				INFOPLIST_FILE = Tracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
