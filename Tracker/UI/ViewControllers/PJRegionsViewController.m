@@ -8,6 +8,7 @@
 
 #import "PJRegionsViewController.h"
 #import "PJRegionTableViewCell.h"
+#import "PJTracksViewController.h"
 
 @interface PJRegionsViewController ()
 
@@ -59,7 +60,7 @@
         cell = [topLevelObjects objectAtIndex:0];
     }
     NSDictionary *region = [_regions objectAtIndex:indexPath.row];
-    //setup downloaded, downloading adn progress from core data
+    //setup downloaded, downloading adn progress from core data by id
     [cell setupWithName:region[@"name"] downloaded:NO downloading:NO progress:0];
     
     return cell;
@@ -67,13 +68,17 @@
 
 - (IBAction)back
 {
-    [self dismissViewControllerAnimated:YES completion:nil]; // ios 6
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *region = [_regions objectAtIndex:indexPath.row];
-    NSLog(@"Clicked region with id %@", region[@"id"]);
+    
+    PJTracksViewController *modalController = [[PJTracksViewController alloc] initWithNibName:@"PJTracksViewController" bundle:nil];
+    [modalController setupWithRegionID:region[@"id"]];
+    [self.navigationController pushViewController:modalController animated:YES];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

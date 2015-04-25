@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */; };
+		9341FC9C1AEC021200307BC1 /* PJCurrentLocationMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9341FC9B1AEC021200307BC1 /* PJCurrentLocationMarker.xib */; };
+		9341FC9F1AEC02B900307BC1 /* PJCurrentLocationMarkerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9341FC9E1AEC02B900307BC1 /* PJCurrentLocationMarkerView.m */; };
 		935C84061AEBBC68008E2ACF /* track1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 935C84051AEBBC68008E2ACF /* track1.geojson */; };
 		935C84081AEBBC80008E2ACF /* sofia.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 935C84071AEBBC80008E2ACF /* sofia.mbtiles */; };
-		938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594B1AEB8FCD008A2A49 /* FirstViewController.m */; };
+		935C840C1AEBBD73008E2ACF /* PJLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 935C840B1AEBBD73008E2ACF /* PJLocationManager.m */; };
+		935C840E1AEBC2A7008E2ACF /* lozenetsLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 935C840D1AEBC2A7008E2ACF /* lozenetsLocation.gpx */; };
+		938D594E1AEB8FCD008A2A49 /* PJMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594B1AEB8FCD008A2A49 /* PJMapViewController.m */; };
 		938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594D1AEB8FCD008A2A49 /* SecondViewController.m */; };
 		938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59541AEB90F5008A2A49 /* ALView+PureLayout.m */; };
 		938D595D1AEB90F5008A2A49 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59561AEB90F5008A2A49 /* NSArray+PureLayout.m */; };
@@ -43,6 +47,13 @@
 		F83D80A11AEBC53700F31961 /* PJRegionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83D809F1AEBC53700F31961 /* PJRegionTableViewCell.xib */; };
 		F83D80A61AEBCDDF00F31961 /* PJRegionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D80A41AEBCDDF00F31961 /* PJRegionsViewController.m */; };
 		F83D80A71AEBCDDF00F31961 /* PJRegionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83D80A51AEBCDDF00F31961 /* PJRegionsViewController.xib */; };
+		F83D80AC1AEBE29E00F31961 /* PJTrackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D80AA1AEBE29E00F31961 /* PJTrackTableViewCell.m */; };
+		F83D80AD1AEBE29E00F31961 /* PJTrackTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83D80AB1AEBE29E00F31961 /* PJTrackTableViewCell.xib */; };
+		F83D80B01AEBE70400F31961 /* clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F83D80AF1AEBE70400F31961 /* clock@2x.png */; };
+		F83D80B21AEBE7D300F31961 /* thumbs_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F83D80B11AEBE7D300F31961 /* thumbs_up@2x.png */; };
+		F83D80B41AEBE81F00F31961 /* flag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F83D80B31AEBE81F00F31961 /* flag@2x.png */; };
+		F83D80B81AEBEB5100F31961 /* PJTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D80B61AEBEB5100F31961 /* PJTracksViewController.m */; };
+		F83D80B91AEBEB5100F31961 /* PJTracksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83D80B71AEBEB5100F31961 /* PJTracksViewController.xib */; };
 		F8AA15CE1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */; };
 		F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */; };
 		F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D31AEBC2D700DFD241 /* NSArray+PureLayout.m */; };
@@ -71,11 +82,17 @@
 
 /* Begin PBXFileReference section */
 		93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = "geography-class_medres.mbtiles"; path = "Resources/maps/geography-class_medres.mbtiles"; sourceTree = SOURCE_ROOT; };
+		9341FC9B1AEC021200307BC1 /* PJCurrentLocationMarker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PJCurrentLocationMarker.xib; path = UI/Views/Maps/PJCurrentLocationMarker.xib; sourceTree = "<group>"; };
+		9341FC9D1AEC02B900307BC1 /* PJCurrentLocationMarkerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJCurrentLocationMarkerView.h; path = UI/Views/Maps/PJCurrentLocationMarkerView.h; sourceTree = "<group>"; };
+		9341FC9E1AEC02B900307BC1 /* PJCurrentLocationMarkerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJCurrentLocationMarkerView.m; path = UI/Views/Maps/PJCurrentLocationMarkerView.m; sourceTree = "<group>"; };
 		935C84051AEBBC68008E2ACF /* track1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = track1.geojson; path = Resources/tracks/track1.geojson; sourceTree = SOURCE_ROOT; };
 		935C84071AEBBC80008E2ACF /* sofia.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = sofia.mbtiles; path = Resources/maps/sofia.mbtiles; sourceTree = SOURCE_ROOT; };
+		935C840A1AEBBD73008E2ACF /* PJLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJLocationManager.h; path = Utils/PJLocationManager.h; sourceTree = SOURCE_ROOT; };
+		935C840B1AEBBD73008E2ACF /* PJLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJLocationManager.m; path = Utils/PJLocationManager.m; sourceTree = SOURCE_ROOT; };
+		935C840D1AEBC2A7008E2ACF /* lozenetsLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = lozenetsLocation.gpx; path = ../../Desktop/lozenetsLocation.gpx; sourceTree = "<group>"; };
 		938D59461AEB8CFD008A2A49 /* bulgaria.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bulgaria.geojson; path = Resources/geojson/bulgaria.geojson; sourceTree = SOURCE_ROOT; };
-		938D594A1AEB8FCD008A2A49 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = UI/ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
-		938D594B1AEB8FCD008A2A49 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = UI/ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
+		938D594A1AEB8FCD008A2A49 /* PJMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJMapViewController.h; path = UI/ViewControllers/PJMapViewController.h; sourceTree = "<group>"; };
+		938D594B1AEB8FCD008A2A49 /* PJMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJMapViewController.m; path = UI/ViewControllers/PJMapViewController.m; sourceTree = "<group>"; };
 		938D594C1AEB8FCD008A2A49 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = UI/ViewControllers/SecondViewController.h; sourceTree = "<group>"; };
 		938D594D1AEB8FCD008A2A49 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = UI/ViewControllers/SecondViewController.m; sourceTree = "<group>"; };
 		938D59541AEB90F5008A2A49 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "Libraries/PureLayout/ALView+PureLayout.m"; sourceTree = SOURCE_ROOT; };
@@ -122,6 +139,15 @@
 		F83D80A31AEBCDDF00F31961 /* PJRegionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJRegionsViewController.h; path = UI/ViewControllers/PJRegionsViewController.h; sourceTree = "<group>"; };
 		F83D80A41AEBCDDF00F31961 /* PJRegionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJRegionsViewController.m; path = UI/ViewControllers/PJRegionsViewController.m; sourceTree = "<group>"; };
 		F83D80A51AEBCDDF00F31961 /* PJRegionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PJRegionsViewController.xib; path = UI/ViewControllers/PJRegionsViewController.xib; sourceTree = "<group>"; };
+		F83D80A91AEBE29E00F31961 /* PJTrackTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJTrackTableViewCell.h; path = UI/Views/Tracks/PJTrackTableViewCell.h; sourceTree = "<group>"; };
+		F83D80AA1AEBE29E00F31961 /* PJTrackTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJTrackTableViewCell.m; path = UI/Views/Tracks/PJTrackTableViewCell.m; sourceTree = "<group>"; };
+		F83D80AB1AEBE29E00F31961 /* PJTrackTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PJTrackTableViewCell.xib; path = UI/Views/Tracks/PJTrackTableViewCell.xib; sourceTree = "<group>"; };
+		F83D80AF1AEBE70400F31961 /* clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clock@2x.png"; path = "Resources/images/clock@2x.png"; sourceTree = SOURCE_ROOT; };
+		F83D80B11AEBE7D300F31961 /* thumbs_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "thumbs_up@2x.png"; path = "Resources/images/thumbs_up@2x.png"; sourceTree = SOURCE_ROOT; };
+		F83D80B31AEBE81F00F31961 /* flag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flag@2x.png"; path = "Resources/images/flag@2x.png"; sourceTree = SOURCE_ROOT; };
+		F83D80B51AEBEB5100F31961 /* PJTracksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJTracksViewController.h; path = UI/Views/Tracks/PJTracksViewController.h; sourceTree = "<group>"; };
+		F83D80B61AEBEB5100F31961 /* PJTracksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJTracksViewController.m; path = UI/Views/Tracks/PJTracksViewController.m; sourceTree = "<group>"; };
+		F83D80B71AEBEB5100F31961 /* PJTracksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PJTracksViewController.xib; path = UI/Views/Tracks/PJTracksViewController.xib; sourceTree = "<group>"; };
 		F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = Libraries/Maply/WhirlyGlobeMaplyComponent.framework; sourceTree = SOURCE_ROOT; };
 		F8AA15D01AEBC2D700DFD241 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "Libraries/PureLayout/ALView+PureLayout.h"; sourceTree = SOURCE_ROOT; };
 		F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "Libraries/PureLayout/ALView+PureLayout.m"; sourceTree = SOURCE_ROOT; };
@@ -183,12 +209,31 @@
 			name = maps;
 			sourceTree = "<group>";
 		};
+		9341FC9A1AEC01E800307BC1 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				9341FC9B1AEC021200307BC1 /* PJCurrentLocationMarker.xib */,
+				9341FC9D1AEC02B900307BC1 /* PJCurrentLocationMarkerView.h */,
+				9341FC9E1AEC02B900307BC1 /* PJCurrentLocationMarkerView.m */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
 		935C84041AEBBC5A008E2ACF /* tracks */ = {
 			isa = PBXGroup;
 			children = (
 				935C84051AEBBC68008E2ACF /* track1.geojson */,
 			);
 			name = tracks;
+			sourceTree = "<group>";
+		};
+		935C84091AEBBD16008E2ACF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				935C840A1AEBBD73008E2ACF /* PJLocationManager.h */,
+				935C840B1AEBBD73008E2ACF /* PJLocationManager.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		938D59431AEB8B56008A2A49 /* geojson */ = {
@@ -212,13 +257,10 @@
 		938D59491AEB8FC3008A2A49 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				938D594A1AEB8FCD008A2A49 /* FirstViewController.h */,
-				938D594B1AEB8FCD008A2A49 /* FirstViewController.m */,
+				938D594A1AEB8FCD008A2A49 /* PJMapViewController.h */,
+				938D594B1AEB8FCD008A2A49 /* PJMapViewController.m */,
 				938D594C1AEB8FCD008A2A49 /* SecondViewController.h */,
 				938D594D1AEB8FCD008A2A49 /* SecondViewController.m */,
-				F83D80A31AEBCDDF00F31961 /* PJRegionsViewController.h */,
-				F83D80A41AEBCDDF00F31961 /* PJRegionsViewController.m */,
-				F83D80A51AEBCDDF00F31961 /* PJRegionsViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -242,6 +284,7 @@
 		939D95E71AEB7B4000BFDC21 = {
 			isa = PBXGroup;
 			children = (
+				935C840D1AEBC2A7008E2ACF /* lozenetsLocation.gpx */,
 				939D95F21AEB7B4000BFDC21 /* Tracker */,
 				939D960F1AEB7B4000BFDC21 /* TrackerTests */,
 				939D95F11AEB7B4000BFDC21 /* Products */,
@@ -260,6 +303,7 @@
 		939D95F21AEB7B4000BFDC21 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				935C84091AEBBD16008E2ACF /* Utils */,
 				939D961C1AEB7B5600BFDC21 /* Libraries */,
 				939D95F71AEB7B4000BFDC21 /* AppDelegate.h */,
 				939D95F81AEB7B4000BFDC21 /* AppDelegate.m */,
@@ -367,8 +411,34 @@
 				F83D809D1AEBC53700F31961 /* PJRegionTableViewCell.h */,
 				F83D809E1AEBC53700F31961 /* PJRegionTableViewCell.m */,
 				F83D809F1AEBC53700F31961 /* PJRegionTableViewCell.xib */,
+				F83D80A31AEBCDDF00F31961 /* PJRegionsViewController.h */,
+				F83D80A41AEBCDDF00F31961 /* PJRegionsViewController.m */,
+				F83D80A51AEBCDDF00F31961 /* PJRegionsViewController.xib */,
 			);
 			name = Regions;
+			sourceTree = "<group>";
+		};
+		F83D80A81AEBE26200F31961 /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				F83D80A91AEBE29E00F31961 /* PJTrackTableViewCell.h */,
+				F83D80AA1AEBE29E00F31961 /* PJTrackTableViewCell.m */,
+				F83D80AB1AEBE29E00F31961 /* PJTrackTableViewCell.xib */,
+				F83D80B51AEBEB5100F31961 /* PJTracksViewController.h */,
+				F83D80B61AEBEB5100F31961 /* PJTracksViewController.m */,
+				F83D80B71AEBEB5100F31961 /* PJTracksViewController.xib */,
+			);
+			name = Tracks;
+			sourceTree = "<group>";
+		};
+		F83D80AE1AEBE6F900F31961 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F83D80AF1AEBE70400F31961 /* clock@2x.png */,
+				F83D80B11AEBE7D300F31961 /* thumbs_up@2x.png */,
+				F83D80B31AEBE81F00F31961 /* flag@2x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		F8AA15CC1AEBC29600DFD241 /* Maply */ = {
@@ -499,14 +569,18 @@
 			files = (
 				A7EE4C701AEBE7170062D775 /* NewLandmarkTableViewCell.xib in Resources */,
 				935C84061AEBBC68008E2ACF /* track1.geojson in Resources */,
+				F83D80AD1AEBE29E00F31961 /* PJTrackTableViewCell.xib in Resources */,
+				F83D80B41AEBE81F00F31961 /* flag@2x.png in Resources */,
 				935C84081AEBBC80008E2ACF /* sofia.mbtiles in Resources */,
 				A7EE4C6B1AEBE4C50062D775 /* AddNewTrackViewController.xib in Resources */,
 				A7EE4C7F1AEC01100062D775 /* selectInsertTypeViewController.xib in Resources */,
 				F8C9A1021AEBC0A9003CD6C9 /* FBAudienceNetwork.README.txt in Resources */,
 				939D96021AEB7B4000BFDC21 /* Main.storyboard in Resources */,
 				939D96071AEB7B4000BFDC21 /* LaunchScreen.xib in Resources */,
+				F83D80B91AEBEB5100F31961 /* PJTracksViewController.xib in Resources */,
 				F8C9A1071AEBC0AA003CD6C9 /* LICENSE in Resources */,
 				93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */,
+				F83D80B21AEBE7D300F31961 /* thumbs_up@2x.png in Resources */,
 				F83D80A11AEBC53700F31961 /* PJRegionTableViewCell.xib in Resources */,
 				F83D80A71AEBCDDF00F31961 /* PJRegionsViewController.xib in Resources */,
 				F8C9A1001AEBC0A9003CD6C9 /* FacebookSDK.strings in Resources */,
@@ -534,13 +608,14 @@
 			files = (
 				F83D809C1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld in Sources */,
 				938D595E1AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				935C840C1AEBBD73008E2ACF /* PJLocationManager.m in Sources */,
 				F8AA15DB1AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */,
 				A7EE4C6A1AEBE4C50062D775 /* AddNewTrackViewController.m in Sources */,
 				939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */,
 				A7EE4C7E1AEC01100062D775 /* selectInsertTypeViewController.m in Sources */,
 				F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */,
-				938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */,
+				938D594E1AEB8FCD008A2A49 /* PJMapViewController.m in Sources */,
 				F83D80A01AEBC53700F31961 /* PJRegionTableViewCell.m in Sources */,
 				938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */,
 				A7EE4C741AEBEFD60062D775 /* AddItemToNewLandmarkTableViewCell.m in Sources */,
@@ -694,6 +769,10 @@
 				);
 				INFOPLIST_FILE = Tracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/Maply/WhirlyGlobeMaplyComponent.framework/Versions/A",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -712,6 +791,10 @@
 				);
 				INFOPLIST_FILE = Tracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/Maply/WhirlyGlobeMaplyComponent.framework/Versions/A",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
