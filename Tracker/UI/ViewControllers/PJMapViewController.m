@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 bg.paperjam. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "PJMapViewController.h"
 #import <WhirlyGlobeComponent.h>
 #import "MaplyComponent.h"
 #import <CoreLocation/CoreLocation.h>
 #import "PJCurrentLocationMarkerView.h"
 
-@interface FirstViewController () <CLLocationManagerDelegate, MaplyViewControllerDelegate>
+@interface PJMapViewController () <CLLocationManagerDelegate, MaplyViewControllerDelegate>
 
 @property(strong, nonatomic) CLLocationManager *locationManager;
 @property(strong, nonatomic) CLLocation *currentLocation;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation FirstViewController {
+@implementation PJMapViewController {
     MaplyViewController *theViewC;
     NSDictionary *vectorDict;
 }
@@ -41,6 +41,10 @@
     [self.view addSubview:theViewC.view];
     theViewC.view.frame = self.view.bounds;
     [self addChildViewController:theViewC];
+    
+    for(UIPanGestureRecognizer *panGestureRecognizer in [theViewC.view.subviews[0] gestureRecognizers]) {
+        [panGestureRecognizer addTarget:self action:@selector(positionCurrentLocationPointer)];
+    }
     
     MaplyViewController *mapViewC = nil;
     mapViewC = (MaplyViewController *)theViewC;

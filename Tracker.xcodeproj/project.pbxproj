@@ -14,7 +14,7 @@
 		935C84081AEBBC80008E2ACF /* sofia.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 935C84071AEBBC80008E2ACF /* sofia.mbtiles */; };
 		935C840C1AEBBD73008E2ACF /* PJLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 935C840B1AEBBD73008E2ACF /* PJLocationManager.m */; };
 		935C840E1AEBC2A7008E2ACF /* lozenetsLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 935C840D1AEBC2A7008E2ACF /* lozenetsLocation.gpx */; };
-		938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594B1AEB8FCD008A2A49 /* FirstViewController.m */; };
+		938D594E1AEB8FCD008A2A49 /* PJMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594B1AEB8FCD008A2A49 /* PJMapViewController.m */; };
 		938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594D1AEB8FCD008A2A49 /* SecondViewController.m */; };
 		938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59541AEB90F5008A2A49 /* ALView+PureLayout.m */; };
 		938D595D1AEB90F5008A2A49 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59561AEB90F5008A2A49 /* NSArray+PureLayout.m */; };
@@ -80,8 +80,8 @@
 		935C840B1AEBBD73008E2ACF /* PJLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJLocationManager.m; path = Utils/PJLocationManager.m; sourceTree = SOURCE_ROOT; };
 		935C840D1AEBC2A7008E2ACF /* lozenetsLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = lozenetsLocation.gpx; path = ../../Desktop/lozenetsLocation.gpx; sourceTree = "<group>"; };
 		938D59461AEB8CFD008A2A49 /* bulgaria.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bulgaria.geojson; path = Resources/geojson/bulgaria.geojson; sourceTree = SOURCE_ROOT; };
-		938D594A1AEB8FCD008A2A49 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = UI/ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
-		938D594B1AEB8FCD008A2A49 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = UI/ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
+		938D594A1AEB8FCD008A2A49 /* PJMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJMapViewController.h; path = UI/ViewControllers/PJMapViewController.h; sourceTree = "<group>"; };
+		938D594B1AEB8FCD008A2A49 /* PJMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJMapViewController.m; path = UI/ViewControllers/PJMapViewController.m; sourceTree = "<group>"; };
 		938D594C1AEB8FCD008A2A49 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = UI/ViewControllers/SecondViewController.h; sourceTree = "<group>"; };
 		938D594D1AEB8FCD008A2A49 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = UI/ViewControllers/SecondViewController.m; sourceTree = "<group>"; };
 		938D59541AEB90F5008A2A49 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "Libraries/PureLayout/ALView+PureLayout.m"; sourceTree = SOURCE_ROOT; };
@@ -230,8 +230,8 @@
 		938D59491AEB8FC3008A2A49 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				938D594A1AEB8FCD008A2A49 /* FirstViewController.h */,
-				938D594B1AEB8FCD008A2A49 /* FirstViewController.m */,
+				938D594A1AEB8FCD008A2A49 /* PJMapViewController.h */,
+				938D594B1AEB8FCD008A2A49 /* PJMapViewController.m */,
 				938D594C1AEB8FCD008A2A49 /* SecondViewController.h */,
 				938D594D1AEB8FCD008A2A49 /* SecondViewController.m */,
 			);
@@ -555,7 +555,7 @@
 				F83D80B81AEBEB5100F31961 /* PJTracksViewController.m in Sources */,
 				939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */,
 				F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */,
-				938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */,
+				938D594E1AEB8FCD008A2A49 /* PJMapViewController.m in Sources */,
 				F83D80A01AEBC53700F31961 /* PJRegionTableViewCell.m in Sources */,
 				938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */,
 				9341FC9F1AEC02B900307BC1 /* PJCurrentLocationMarkerView.m in Sources */,
