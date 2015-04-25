@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */; };
+		9341FC9C1AEC021200307BC1 /* PJCurrentLocationMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9341FC9B1AEC021200307BC1 /* PJCurrentLocationMarker.xib */; };
+		9341FC9F1AEC02B900307BC1 /* PJCurrentLocationMarkerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9341FC9E1AEC02B900307BC1 /* PJCurrentLocationMarkerView.m */; };
 		935C84061AEBBC68008E2ACF /* track1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 935C84051AEBBC68008E2ACF /* track1.geojson */; };
 		935C84081AEBBC80008E2ACF /* sofia.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 935C84071AEBBC80008E2ACF /* sofia.mbtiles */; };
 		935C840C1AEBBD73008E2ACF /* PJLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 935C840B1AEBBD73008E2ACF /* PJLocationManager.m */; };
@@ -69,6 +71,9 @@
 
 /* Begin PBXFileReference section */
 		93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = "geography-class_medres.mbtiles"; path = "Resources/maps/geography-class_medres.mbtiles"; sourceTree = SOURCE_ROOT; };
+		9341FC9B1AEC021200307BC1 /* PJCurrentLocationMarker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PJCurrentLocationMarker.xib; path = UI/Views/Maps/PJCurrentLocationMarker.xib; sourceTree = "<group>"; };
+		9341FC9D1AEC02B900307BC1 /* PJCurrentLocationMarkerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJCurrentLocationMarkerView.h; path = UI/Views/Maps/PJCurrentLocationMarkerView.h; sourceTree = "<group>"; };
+		9341FC9E1AEC02B900307BC1 /* PJCurrentLocationMarkerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJCurrentLocationMarkerView.m; path = UI/Views/Maps/PJCurrentLocationMarkerView.m; sourceTree = "<group>"; };
 		935C84051AEBBC68008E2ACF /* track1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = track1.geojson; path = Resources/tracks/track1.geojson; sourceTree = SOURCE_ROOT; };
 		935C84071AEBBC80008E2ACF /* sofia.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = sofia.mbtiles; path = Resources/maps/sofia.mbtiles; sourceTree = SOURCE_ROOT; };
 		935C840A1AEBBD73008E2ACF /* PJLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJLocationManager.h; path = Utils/PJLocationManager.h; sourceTree = SOURCE_ROOT; };
@@ -177,6 +182,16 @@
 			name = maps;
 			sourceTree = "<group>";
 		};
+		9341FC9A1AEC01E800307BC1 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				9341FC9B1AEC021200307BC1 /* PJCurrentLocationMarker.xib */,
+				9341FC9D1AEC02B900307BC1 /* PJCurrentLocationMarkerView.h */,
+				9341FC9E1AEC02B900307BC1 /* PJCurrentLocationMarkerView.m */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
 		935C84041AEBBC5A008E2ACF /* tracks */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +241,7 @@
 		938D59501AEB8FED008A2A49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9341FC9A1AEC01E800307BC1 /* Maps */,
 				F83D80A81AEBE26200F31961 /* Tracks */,
 				F83D80A21AEBC69C00F31961 /* Regions */,
 			);
@@ -512,6 +528,7 @@
 				F83D80B01AEBE70400F31961 /* clock@2x.png in Resources */,
 				F8C9A1081AEBC0AA003CD6C9 /* README.txt in Resources */,
 				935C840E1AEBC2A7008E2ACF /* lozenetsLocation.gpx in Resources */,
+				9341FC9C1AEC021200307BC1 /* PJCurrentLocationMarker.xib in Resources */,
 				939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +558,7 @@
 				938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */,
 				F83D80A01AEBC53700F31961 /* PJRegionTableViewCell.m in Sources */,
 				938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */,
+				9341FC9F1AEC02B900307BC1 /* PJCurrentLocationMarkerView.m in Sources */,
 				F83D80AC1AEBE29E00F31961 /* PJTrackTableViewCell.m in Sources */,
 				F83D80961AEBC04800F31961 /* PJCoreDataManager.m in Sources */,
 				938D595D1AEB90F5008A2A49 /* NSArray+PureLayout.m in Sources */,
