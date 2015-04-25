@@ -30,6 +30,8 @@
 		F83D809C1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F83D809A1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld */; };
 		F83D80A01AEBC53700F31961 /* PJRegionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D809E1AEBC53700F31961 /* PJRegionTableViewCell.m */; };
 		F83D80A11AEBC53700F31961 /* PJRegionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83D809F1AEBC53700F31961 /* PJRegionTableViewCell.xib */; };
+		F83D80A61AEBCDDF00F31961 /* PJRegionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D80A41AEBCDDF00F31961 /* PJRegionsViewController.m */; };
+		F83D80A71AEBCDDF00F31961 /* PJRegionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83D80A51AEBCDDF00F31961 /* PJRegionsViewController.xib */; };
 		F8AA15CE1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */; };
 		F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */; };
 		F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D31AEBC2D700DFD241 /* NSArray+PureLayout.m */; };
@@ -90,6 +92,9 @@
 		F83D809D1AEBC53700F31961 /* PJRegionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJRegionTableViewCell.h; path = UI/Views/PJRegionTableViewCell.h; sourceTree = "<group>"; };
 		F83D809E1AEBC53700F31961 /* PJRegionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJRegionTableViewCell.m; path = UI/Views/PJRegionTableViewCell.m; sourceTree = "<group>"; };
 		F83D809F1AEBC53700F31961 /* PJRegionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PJRegionTableViewCell.xib; path = UI/Views/PJRegionTableViewCell.xib; sourceTree = "<group>"; };
+		F83D80A31AEBCDDF00F31961 /* PJRegionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJRegionsViewController.h; path = UI/ViewControllers/PJRegionsViewController.h; sourceTree = "<group>"; };
+		F83D80A41AEBCDDF00F31961 /* PJRegionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJRegionsViewController.m; path = UI/ViewControllers/PJRegionsViewController.m; sourceTree = "<group>"; };
+		F83D80A51AEBCDDF00F31961 /* PJRegionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PJRegionsViewController.xib; path = UI/ViewControllers/PJRegionsViewController.xib; sourceTree = "<group>"; };
 		F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = Libraries/Maply/WhirlyGlobeMaplyComponent.framework; sourceTree = SOURCE_ROOT; };
 		F8AA15D01AEBC2D700DFD241 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "Libraries/PureLayout/ALView+PureLayout.h"; sourceTree = SOURCE_ROOT; };
 		F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "Libraries/PureLayout/ALView+PureLayout.m"; sourceTree = SOURCE_ROOT; };
@@ -184,6 +189,9 @@
 				938D594B1AEB8FCD008A2A49 /* FirstViewController.m */,
 				938D594C1AEB8FCD008A2A49 /* SecondViewController.h */,
 				938D594D1AEB8FCD008A2A49 /* SecondViewController.m */,
+				F83D80A31AEBCDDF00F31961 /* PJRegionsViewController.h */,
+				F83D80A41AEBCDDF00F31961 /* PJRegionsViewController.m */,
+				F83D80A51AEBCDDF00F31961 /* PJRegionsViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -438,6 +446,7 @@
 				F8C9A1071AEBC0AA003CD6C9 /* LICENSE in Resources */,
 				93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */,
 				F83D80A11AEBC53700F31961 /* PJRegionTableViewCell.xib in Resources */,
+				F83D80A71AEBCDDF00F31961 /* PJRegionsViewController.xib in Resources */,
 				F8C9A1001AEBC0A9003CD6C9 /* FacebookSDK.strings in Resources */,
 				F8C9A1081AEBC0AA003CD6C9 /* README.txt in Resources */,
 				939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */,
@@ -470,6 +479,7 @@
 				F83D80961AEBC04800F31961 /* PJCoreDataManager.m in Sources */,
 				938D595D1AEB90F5008A2A49 /* NSArray+PureLayout.m in Sources */,
 				F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */,
+				F83D80A61AEBCDDF00F31961 /* PJRegionsViewController.m in Sources */,
 				939D95F61AEB7B4000BFDC21 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

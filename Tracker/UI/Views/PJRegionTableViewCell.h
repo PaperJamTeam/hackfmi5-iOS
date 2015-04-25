@@ -10,4 +10,8 @@
 
 @interface PJRegionTableViewCell : UITableViewCell
 
+-(void)setupWithName:(NSString*)name downloaded:(BOOL)downloaded downloading:(BOOL)downloading progress:(double)progress;
+-(void)setDownloadingWithProgress:(double)progress;
+-(void)setDownloaded;
+
 @end
