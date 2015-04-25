@@ -1,5 +1,5 @@
 //
-//  AddNewTrackViewController.h
+//  AddItemToNewLandmarkTableViewCell.h
 //  Tracker
 //
 //  Created by Dimitar Stanev on 4/25/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddNewTrackViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface AddItemToNewLandmarkTableViewCell : UITableViewCell
 
 @end

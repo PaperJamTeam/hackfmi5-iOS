@@ -10,6 +10,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "AppDelegate.h"
+#import "PJRegionsViewController.h"
 #import "AddNewTrackViewController.h"
 
 @interface SecondViewController ()
@@ -69,9 +70,14 @@
 }
 
 -(void) testButtonPressed {
-    AddNewTrackViewController *tvc = [[AddNewTrackViewController alloc] initWithNibName:@"AddNewTrackViewController" bundle:nil];
-//    [tvc.tableView setFrame:CGRectMake(100, 100, 250, 250)];
-    [self.view addSubview:tvc.tableView];
+    AddNewTrackViewController *modalController = [[AddNewTrackViewController alloc] initWithNibName:@"AddNewTrackViewController" bundle:nil];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:modalController];
+    
+    navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    
+    // And now you want to present the view in a modal fashion
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 @end
