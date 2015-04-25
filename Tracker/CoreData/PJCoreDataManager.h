@@ -1,5 +1,5 @@
 //
-//  CoreDataManager.h
+//  PJCoreDataManager.h
 //  Tracker
 //
 //  Created by Ivan Raychev on 4/25/15.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface CoreDataManager : NSObject
+@interface PJCoreDataManager : NSObject
 
 +(instancetype)sharedManager;
 

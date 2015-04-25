@@ -26,8 +26,10 @@
 		939D96261AEB7BDE00BFDC21 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96251AEB7BDE00BFDC21 /* libz.dylib */; };
 		939D96281AEB7BE300BFDC21 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96271AEB7BE300BFDC21 /* libc++.dylib */; };
 		939D962A1AEB7BF000BFDC21 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96291AEB7BF000BFDC21 /* libxml2.dylib */; };
-		F83D80961AEBC04800F31961 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D80951AEBC04800F31961 /* CoreDataManager.m */; };
+		F83D80961AEBC04800F31961 /* PJCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D80951AEBC04800F31961 /* PJCoreDataManager.m */; };
 		F83D809C1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F83D809A1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld */; };
+		F83D80A01AEBC53700F31961 /* PJRegionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D809E1AEBC53700F31961 /* PJRegionTableViewCell.m */; };
+		F83D80A11AEBC53700F31961 /* PJRegionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83D809F1AEBC53700F31961 /* PJRegionTableViewCell.xib */; };
 		F8AA15CE1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */; };
 		F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */; };
 		F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D31AEBC2D700DFD241 /* NSArray+PureLayout.m */; };
@@ -82,9 +84,12 @@
 		939D96251AEB7BDE00BFDC21 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		939D96271AEB7BE300BFDC21 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		939D96291AEB7BF000BFDC21 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		F83D80941AEBC04800F31961 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "\U0010CoreDataManager.h"; path = "CoreData/\U0010CoreDataManager.h"; sourceTree = "<group>"; };
-		F83D80951AEBC04800F31961 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "\U0010CoreDataManager.m"; path = "CoreData/\U0010CoreDataManager.m"; sourceTree = "<group>"; };
+		F83D80941AEBC04800F31961 /* PJCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PJ\U0010CoreDataManager.h"; path = "CoreData/PJ\U0010CoreDataManager.h"; sourceTree = "<group>"; };
+		F83D80951AEBC04800F31961 /* PJCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PJ\U0010CoreDataManager.m"; path = "CoreData/PJ\U0010CoreDataManager.m"; sourceTree = "<group>"; };
 		F83D809B1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackerDataModel.xcdatamodel; sourceTree = "<group>"; };
+		F83D809D1AEBC53700F31961 /* PJRegionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJRegionTableViewCell.h; path = UI/Views/PJRegionTableViewCell.h; sourceTree = "<group>"; };
+		F83D809E1AEBC53700F31961 /* PJRegionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJRegionTableViewCell.m; path = UI/Views/PJRegionTableViewCell.m; sourceTree = "<group>"; };
+		F83D809F1AEBC53700F31961 /* PJRegionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PJRegionTableViewCell.xib; path = UI/Views/PJRegionTableViewCell.xib; sourceTree = "<group>"; };
 		F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = Libraries/Maply/WhirlyGlobeMaplyComponent.framework; sourceTree = SOURCE_ROOT; };
 		F8AA15D01AEBC2D700DFD241 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "Libraries/PureLayout/ALView+PureLayout.h"; sourceTree = SOURCE_ROOT; };
 		F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "Libraries/PureLayout/ALView+PureLayout.m"; sourceTree = SOURCE_ROOT; };
@@ -186,6 +191,7 @@
 		938D59501AEB8FED008A2A49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F83D80A21AEBC69C00F31961 /* Regions */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -281,11 +287,21 @@
 		F83D80931AEBC01F00F31961 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F83D80941AEBC04800F31961 /* CoreDataManager.h */,
-				F83D80951AEBC04800F31961 /* CoreDataManager.m */,
+				F83D80941AEBC04800F31961 /* PJCoreDataManager.h */,
+				F83D80951AEBC04800F31961 /* PJCoreDataManager.m */,
 				F83D809A1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		F83D80A21AEBC69C00F31961 /* Regions */ = {
+			isa = PBXGroup;
+			children = (
+				F83D809D1AEBC53700F31961 /* PJRegionTableViewCell.h */,
+				F83D809E1AEBC53700F31961 /* PJRegionTableViewCell.m */,
+				F83D809F1AEBC53700F31961 /* PJRegionTableViewCell.xib */,
+			);
+			name = Regions;
 			sourceTree = "<group>";
 		};
 		F8AA15CC1AEBC29600DFD241 /* Maply */ = {
@@ -421,6 +437,7 @@
 				939D96071AEB7B4000BFDC21 /* LaunchScreen.xib in Resources */,
 				F8C9A1071AEBC0AA003CD6C9 /* LICENSE in Resources */,
 				93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */,
+				F83D80A11AEBC53700F31961 /* PJRegionTableViewCell.xib in Resources */,
 				F8C9A1001AEBC0A9003CD6C9 /* FacebookSDK.strings in Resources */,
 				F8C9A1081AEBC0AA003CD6C9 /* README.txt in Resources */,
 				939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */,
@@ -448,8 +465,9 @@
 				939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */,
 				F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */,
 				938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */,
+				F83D80A01AEBC53700F31961 /* PJRegionTableViewCell.m in Sources */,
 				938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */,
-				F83D80961AEBC04800F31961 /* CoreDataManager.m in Sources */,
+				F83D80961AEBC04800F31961 /* PJCoreDataManager.m in Sources */,
 				938D595D1AEB90F5008A2A49 /* NSArray+PureLayout.m in Sources */,
 				F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */,
 				939D95F61AEB7B4000BFDC21 /* main.m in Sources */,

@@ -1,21 +1,21 @@
 //
-//  CoreDataManager.m
+//  PJCoreDataManager.m
 //  Tracker
 //
 //  Created by Ivan Raychev on 4/25/15.
 //  Copyright (c) 2015 bg.paperjam. All rights reserved.
 //
 
-#import "CoreDataManager.h"
+#import "PJCoreDataManager.h"
 
-@implementation CoreDataManager
+@implementation PJCoreDataManager
 
 +(instancetype)sharedManager
 {
-    static CoreDataManager *sharedInstance = nil;
+    static PJCoreDataManager *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[CoreDataManager alloc] init];
+        sharedInstance = [[PJCoreDataManager alloc] init];
     });
     return sharedInstance;
 }
