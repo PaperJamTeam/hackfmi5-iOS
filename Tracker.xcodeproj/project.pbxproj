@@ -30,6 +30,7 @@
 		F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */; };
 		F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D31AEBC2D700DFD241 /* NSArray+PureLayout.m */; };
 		F8AA15DB1AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D51AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m */; };
+		F8AA161A1AEBC2D700DFD241 /* TrackerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8AA16181AEBC2D700DFD241 /* TrackerDataModel.xcdatamodeld */; };
 		F8C9A0FF1AEBC0A9003CD6C9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C9A0F51AEBC0A9003CD6C9 /* Bolts.framework */; };
 		F8C9A1001AEBC0A9003CD6C9 /* FacebookSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8C9A0F61AEBC0A9003CD6C9 /* FacebookSDK.strings */; };
 		F8C9A1011AEBC0A9003CD6C9 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C9A0F71AEBC0A9003CD6C9 /* FBAudienceNetwork.framework */; };
@@ -90,6 +91,7 @@
 		F8AA15D61AEBC2D700DFD241 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = Libraries/PureLayout/PureLayout.h; sourceTree = SOURCE_ROOT; };
 		F8AA15D71AEBC2D700DFD241 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "Libraries/PureLayout/PureLayout+Internal.h"; sourceTree = SOURCE_ROOT; };
 		F8AA15D81AEBC2D700DFD241 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = Libraries/PureLayout/PureLayoutDefines.h; sourceTree = SOURCE_ROOT; };
+		F8AA16191AEBC2D700DFD241 /* TrackerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackerDataModel.xcdatamodel; sourceTree = "<group>"; };
 		F8C9A0F51AEBC0A9003CD6C9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Libraries/FacebookSDK/Bolts.framework; sourceTree = SOURCE_ROOT; };
 		F8C9A0F61AEBC0A9003CD6C9 /* FacebookSDK.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = FacebookSDK.strings; path = Libraries/FacebookSDK/FacebookSDK.strings; sourceTree = SOURCE_ROOT; };
 		F8C9A0F71AEBC0A9003CD6C9 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = Libraries/FacebookSDK/FBAudienceNetwork.framework; sourceTree = SOURCE_ROOT; };
@@ -224,6 +226,7 @@
 			children = (
 				939D95F41AEB7B4000BFDC21 /* Info.plist */,
 				939D95F51AEB7B4000BFDC21 /* main.m */,
+				F8AA16181AEBC2D700DFD241 /* TrackerDataModel.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */,
 				938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */,
 				938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */,
+				F8AA161A1AEBC2D700DFD241 /* TrackerDataModel.xcdatamodeld in Sources */,
 				938D595D1AEB90F5008A2A49 /* NSArray+PureLayout.m in Sources */,
 				F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */,
 				939D95F61AEB7B4000BFDC21 /* main.m in Sources */,
@@ -657,6 +661,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F8AA16181AEBC2D700DFD241 /* TrackerDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F8AA16191AEBC2D700DFD241 /* TrackerDataModel.xcdatamodel */,
+			);
+			currentVersion = F8AA16191AEBC2D700DFD241 /* TrackerDataModel.xcdatamodel */;
+			path = TrackerDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 939D95E81AEB7B4000BFDC21 /* Project object */;
 }
