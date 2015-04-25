@@ -65,7 +65,7 @@
                                  time:1.0];
     } else {
         mapViewC.height = 0.01;
-        [mapViewC animateToPosition:MaplyCoordinateMakeWithDegrees(23.3239467,42.6954321)
+        [mapViewC animateToPosition:MaplyCoordinateMakeWithDegrees(23.3306,42.6744)
                                time:1.0];
     }
     

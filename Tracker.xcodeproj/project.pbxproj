@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93072EBE1AEB9E7500E2996E /* map.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EBD1AEB9E7500E2996E /* map.mbtiles */; };
+		93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */; };
+		93072EC41AEBA86A00E2996E /* map.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EC11AEBA86A00E2996E /* map.mbtiles */; };
+		93072EC51AEBA86A00E2996E /* test.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EC21AEBA86A00E2996E /* test.mbtiles */; };
 		938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594B1AEB8FCD008A2A49 /* FirstViewController.m */; };
 		938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594D1AEB8FCD008A2A49 /* SecondViewController.m */; };
 		938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59541AEB90F5008A2A49 /* ALView+PureLayout.m */; };
@@ -24,7 +26,6 @@
 		939D96261AEB7BDE00BFDC21 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96251AEB7BDE00BFDC21 /* libz.dylib */; };
 		939D96281AEB7BE300BFDC21 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96271AEB7BE300BFDC21 /* libc++.dylib */; };
 		939D962A1AEB7BF000BFDC21 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96291AEB7BF000BFDC21 /* libxml2.dylib */; };
-		939D962D1AEB7F0E00BFDC21 /* test.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 939D962C1AEB7F0E00BFDC21 /* test.mbtiles */; };
 		F8AA15CE1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */; };
 		F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */; };
 		F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D31AEBC2D700DFD241 /* NSArray+PureLayout.m */; };
@@ -52,8 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93072EBD1AEB9E7500E2996E /* map.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = map.mbtiles; path = Resources/map.mbtiles; sourceTree = SOURCE_ROOT; };
-		938D59411AEB86BA008A2A49 /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = "geography-class_medres.mbtiles"; path = "Resources/geography-class_medres.mbtiles"; sourceTree = SOURCE_ROOT; };
+		93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = "geography-class_medres.mbtiles"; path = "Resources/maps/geography-class_medres.mbtiles"; sourceTree = SOURCE_ROOT; };
+		93072EC11AEBA86A00E2996E /* map.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = map.mbtiles; path = Resources/maps/map.mbtiles; sourceTree = SOURCE_ROOT; };
+		93072EC21AEBA86A00E2996E /* test.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.mbtiles; path = Resources/maps/test.mbtiles; sourceTree = SOURCE_ROOT; };
 		938D59461AEB8CFD008A2A49 /* bulgaria.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bulgaria.geojson; path = Resources/geojson/bulgaria.geojson; sourceTree = SOURCE_ROOT; };
 		938D594A1AEB8FCD008A2A49 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = UI/ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
 		938D594B1AEB8FCD008A2A49 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = UI/ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
@@ -78,7 +80,6 @@
 		939D96251AEB7BDE00BFDC21 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		939D96271AEB7BE300BFDC21 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		939D96291AEB7BF000BFDC21 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		939D962C1AEB7F0E00BFDC21 /* test.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.mbtiles; path = Resources/test.mbtiles; sourceTree = SOURCE_ROOT; };
 		F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = Libraries/Maply/WhirlyGlobeMaplyComponent.framework; sourceTree = SOURCE_ROOT; };
 		F8AA15D01AEBC2D700DFD241 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "Libraries/PureLayout/ALView+PureLayout.h"; sourceTree = SOURCE_ROOT; };
 		F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "Libraries/PureLayout/ALView+PureLayout.m"; sourceTree = SOURCE_ROOT; };
@@ -131,6 +132,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93072EBF1AEBA85F00E2996E /* maps */ = {
+			isa = PBXGroup;
+			children = (
+				93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */,
+				93072EC11AEBA86A00E2996E /* map.mbtiles */,
+				93072EC21AEBA86A00E2996E /* test.mbtiles */,
+			);
+			name = maps;
+			sourceTree = "<group>";
+		};
 		938D59431AEB8B56008A2A49 /* geojson */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,10 +258,8 @@
 		939D962B1AEB7F0000BFDC21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				93072EBD1AEB9E7500E2996E /* map.mbtiles */,
+				93072EBF1AEBA85F00E2996E /* maps */,
 				938D59431AEB8B56008A2A49 /* geojson */,
-				938D59411AEB86BA008A2A49 /* geography-class_medres.mbtiles */,
-				939D962C1AEB7F0E00BFDC21 /* test.mbtiles */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -381,13 +390,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93072EC51AEBA86A00E2996E /* test.mbtiles in Resources */,
 				F8C9A1021AEBC0A9003CD6C9 /* FBAudienceNetwork.README.txt in Resources */,
 				939D96021AEB7B4000BFDC21 /* Main.storyboard in Resources */,
-				93072EBE1AEB9E7500E2996E /* map.mbtiles in Resources */,
+				93072EC41AEBA86A00E2996E /* map.mbtiles in Resources */,
 				939D96071AEB7B4000BFDC21 /* LaunchScreen.xib in Resources */,
 				F8C9A1071AEBC0AA003CD6C9 /* LICENSE in Resources */,
+				93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */,
 				F8C9A1001AEBC0A9003CD6C9 /* FacebookSDK.strings in Resources */,
-				939D962D1AEB7F0E00BFDC21 /* test.mbtiles in Resources */,
 				F8C9A1081AEBC0AA003CD6C9 /* README.txt in Resources */,
 				939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */,
 			);
