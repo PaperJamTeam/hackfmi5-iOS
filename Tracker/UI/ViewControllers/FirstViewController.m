@@ -44,7 +44,7 @@
     
     // set up the data source
     MaplyMBTileSource *tileSource =
-    [[MaplyMBTileSource alloc] initWithMBTiles:@"geography-class_medres"];
+    [[MaplyMBTileSource alloc] initWithMBTiles:@"map"];
     
     // set up the layer
     MaplyQuadImageTilesLayer *layer =
@@ -58,15 +58,14 @@
     layer.singleLevelLoading = false;
     [theViewC addLayer:layer];
     
-    // start up over San Francisco, center of the universe
     if (globeViewC != nil)
     {
-        globeViewC.height = 0.8;
+        globeViewC.height = 0.01;
         [globeViewC animateToPosition:MaplyCoordinateMakeWithDegrees(-122.4192,37.7793)
                                  time:1.0];
     } else {
-        mapViewC.height = 1.0;
-        [mapViewC animateToPosition:MaplyCoordinateMakeWithDegrees(-122.4192,37.7793)
+        mapViewC.height = 0.01;
+        [mapViewC animateToPosition:MaplyCoordinateMakeWithDegrees(23.3239467,42.6954321)
                                time:1.0];
     }
     
