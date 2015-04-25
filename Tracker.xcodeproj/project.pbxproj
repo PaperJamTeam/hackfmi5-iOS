@@ -37,6 +37,8 @@
 		F83D80B01AEBE70400F31961 /* clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F83D80AF1AEBE70400F31961 /* clock@2x.png */; };
 		F83D80B21AEBE7D300F31961 /* thumbs_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F83D80B11AEBE7D300F31961 /* thumbs_up@2x.png */; };
 		F83D80B41AEBE81F00F31961 /* flag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F83D80B31AEBE81F00F31961 /* flag@2x.png */; };
+		F83D80B81AEBEB5100F31961 /* PJTracksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D80B61AEBEB5100F31961 /* PJTracksViewController.m */; };
+		F83D80B91AEBEB5100F31961 /* PJTracksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F83D80B71AEBEB5100F31961 /* PJTracksViewController.xib */; };
 		F8AA15CE1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */; };
 		F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */; };
 		F8AA15DA1AEBC2D700DFD241 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AA15D31AEBC2D700DFD241 /* NSArray+PureLayout.m */; };
@@ -106,6 +108,9 @@
 		F83D80AF1AEBE70400F31961 /* clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clock@2x.png"; path = "Resources/images/clock@2x.png"; sourceTree = SOURCE_ROOT; };
 		F83D80B11AEBE7D300F31961 /* thumbs_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "thumbs_up@2x.png"; path = "Resources/images/thumbs_up@2x.png"; sourceTree = SOURCE_ROOT; };
 		F83D80B31AEBE81F00F31961 /* flag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flag@2x.png"; path = "Resources/images/flag@2x.png"; sourceTree = SOURCE_ROOT; };
+		F83D80B51AEBEB5100F31961 /* PJTracksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJTracksViewController.h; path = UI/Views/Tracks/PJTracksViewController.h; sourceTree = "<group>"; };
+		F83D80B61AEBEB5100F31961 /* PJTracksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJTracksViewController.m; path = UI/Views/Tracks/PJTracksViewController.m; sourceTree = "<group>"; };
+		F83D80B71AEBEB5100F31961 /* PJTracksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PJTracksViewController.xib; path = UI/Views/Tracks/PJTracksViewController.xib; sourceTree = "<group>"; };
 		F8AA15CD1AEBC2AA00DFD241 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = Libraries/Maply/WhirlyGlobeMaplyComponent.framework; sourceTree = SOURCE_ROOT; };
 		F8AA15D01AEBC2D700DFD241 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "Libraries/PureLayout/ALView+PureLayout.h"; sourceTree = SOURCE_ROOT; };
 		F8AA15D11AEBC2D700DFD241 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "Libraries/PureLayout/ALView+PureLayout.m"; sourceTree = SOURCE_ROOT; };
@@ -331,6 +336,9 @@
 				F83D80A91AEBE29E00F31961 /* PJTrackTableViewCell.h */,
 				F83D80AA1AEBE29E00F31961 /* PJTrackTableViewCell.m */,
 				F83D80AB1AEBE29E00F31961 /* PJTrackTableViewCell.xib */,
+				F83D80B51AEBEB5100F31961 /* PJTracksViewController.h */,
+				F83D80B61AEBEB5100F31961 /* PJTracksViewController.m */,
+				F83D80B71AEBEB5100F31961 /* PJTracksViewController.xib */,
 			);
 			name = Tracks;
 			sourceTree = "<group>";
@@ -478,6 +486,7 @@
 				F8C9A1021AEBC0A9003CD6C9 /* FBAudienceNetwork.README.txt in Resources */,
 				939D96021AEB7B4000BFDC21 /* Main.storyboard in Resources */,
 				939D96071AEB7B4000BFDC21 /* LaunchScreen.xib in Resources */,
+				F83D80B91AEBEB5100F31961 /* PJTracksViewController.xib in Resources */,
 				F8C9A1071AEBC0AA003CD6C9 /* LICENSE in Resources */,
 				93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */,
 				F83D80B21AEBE7D300F31961 /* thumbs_up@2x.png in Resources */,
@@ -508,6 +517,7 @@
 				938D595E1AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				F8AA15DB1AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */,
+				F83D80B81AEBEB5100F31961 /* PJTracksViewController.m in Sources */,
 				939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */,
 				F8AA15D91AEBC2D700DFD241 /* ALView+PureLayout.m in Sources */,
 				938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */,

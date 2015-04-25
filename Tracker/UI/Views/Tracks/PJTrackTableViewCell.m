@@ -40,26 +40,29 @@
     [_ratingLabel setText:rating];
     [_distanceLabel setText:distance];
     
-    NSURL *imgURL=[[NSURL alloc]initWithString:thumbnailURL];
-    NSData *imgdata=[[NSData alloc]initWithContentsOfURL:imgURL];
-    UIImage *image=[[UIImage alloc]initWithData:imgdata];
-    _thumbnail.image=image;
-    
     if ( downloaded ) {
-        [self setAccessoryType:UITableViewCellAccessoryCheckmark];
         [_progressView setHidden:YES];
         [_trackSwitch setSelected:selected];
         [_trackSwitch setHidden:NO];
     } else if ( downloading ) {
-        [self setAccessoryType:UITableViewCellAccessoryNone];
         [_progressView setHidden:NO];
         [_progressView setProgress:progress];
         [_trackSwitch setHidden:YES];
     } else {
-        [self setAccessoryType:UITableViewCellAccessoryNone];
         [_progressView setHidden:YES];
         [_trackSwitch setHidden:YES];
     }
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+    dispatch_async(queue, ^{
+        NSURL *imgURL=[[NSURL alloc]initWithString:thumbnailURL];
+        NSData *imgdata=[[NSData alloc]initWithContentsOfURL:imgURL];
+        UIImage *image=[[UIImage alloc]initWithData:imgdata];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_thumbnail setImage:image];
+        });
+    });
+    
 }
 
 -(void)setDownloadingWithProgress:(double)progress {
@@ -69,7 +72,6 @@
 }
 
 -(void)setDownloaded {
-    [self setAccessoryType:UITableViewCellAccessoryCheckmark];
     [_progressView setHidden:YES];
     [_trackSwitch setHidden:NO];
     [_trackSwitch setSelected:YES];

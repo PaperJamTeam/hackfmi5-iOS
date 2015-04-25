@@ -82,8 +82,12 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="2" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mWM-LP-IPv">
-                        <rect key="frame" x="262" y="29" width="50" height="2"/>
+                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mWM-LP-IPv">
+                        <rect key="frame" x="262" y="29" width="50" height="3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="ScI-fU-bie"/>
+                            <constraint firstAttribute="height" constant="2" id="bpR-wD-3UZ"/>
+                        </constraints>
                     </progressView>
                     <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYM-Dd-tRv">
                         <rect key="frame" x="263" y="14" width="51" height="31"/>
