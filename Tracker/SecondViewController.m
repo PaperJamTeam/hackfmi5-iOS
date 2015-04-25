@@ -7,6 +7,9 @@
 //
 
 #import "SecondViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "AppDelegate.h"
 
 @interface SecondViewController ()
 
@@ -17,6 +20,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    if ([FBSDKAccessToken currentAccessToken]) {
+        FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
+        NSString *userId = token.userID;
+        NSLog(@"User already logged in, userId: %@", userId);
+    }
+    
+    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+    loginButton.center = self.view.center;
+    loginButton.delegate = delegate;
+    [self.view addSubview:loginButton];
 }
 
 - (void)didReceiveMemoryWarning {

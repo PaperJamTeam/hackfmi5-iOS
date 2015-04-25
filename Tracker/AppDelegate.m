@@ -12,12 +12,14 @@
 
 @end
 
+
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    return YES;
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                    didFinishLaunchingWithOptions:launchOptions];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -36,10 +38,39 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBSDKAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
+}
+
+-(void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error
+{
+    FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
+    NSString *userId = token.userID;
+    if ( token ) {
+        NSLog(@"Logged in user with ID: %@", userId);
+    } else {
+        NSLog(@"Tried to log in user but something happened, current userId: %@", userId);
+    }
+}
+
+-(void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton
+{
+    FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
+    NSString *userId = token.userID;
+    NSLog(@"Logged out user, current userId: %@", userId);
 }
 
 @end
