@@ -10,6 +10,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "AppDelegate.h"
+#import "PJRegionsViewController.h"
 
 @interface SecondViewController ()
 
@@ -33,6 +34,25 @@
     loginButton.center = self.view.center;
     loginButton.delegate = delegate;
     [self.view addSubview:loginButton];
+    
+    UIButton *regionsButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [regionsButton setFrame:CGRectMake(loginButton.frame.origin.x, loginButton.frame.origin.y - 50, loginButton.frame.size.width, loginButton.frame.size.height)];
+    [regionsButton setTitle:@"regions" forState:UIControlStateNormal];
+    [regionsButton addTarget:self action:@selector(showRegions) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:regionsButton];
+    [self.view bringSubviewToFront:regionsButton];
+}
+
+-(void)showRegions
+{
+    PJRegionsViewController *modalController = [[PJRegionsViewController alloc] initWithNibName:@"PJRegionsViewController" bundle:nil];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:modalController];
+    
+    navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    
+    // And now you want to present the view in a modal fashion
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
