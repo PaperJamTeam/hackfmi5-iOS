@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */; };
-		93072EC41AEBA86A00E2996E /* map.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EC11AEBA86A00E2996E /* map.mbtiles */; };
-		93072EC51AEBA86A00E2996E /* test.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EC21AEBA86A00E2996E /* test.mbtiles */; };
+		935C84061AEBBC68008E2ACF /* track1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 935C84051AEBBC68008E2ACF /* track1.geojson */; };
+		935C84081AEBBC80008E2ACF /* sofia.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 935C84071AEBBC80008E2ACF /* sofia.mbtiles */; };
 		938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594B1AEB8FCD008A2A49 /* FirstViewController.m */; };
 		938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594D1AEB8FCD008A2A49 /* SecondViewController.m */; };
 		938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59541AEB90F5008A2A49 /* ALView+PureLayout.m */; };
@@ -55,8 +55,8 @@
 
 /* Begin PBXFileReference section */
 		93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = "geography-class_medres.mbtiles"; path = "Resources/maps/geography-class_medres.mbtiles"; sourceTree = SOURCE_ROOT; };
-		93072EC11AEBA86A00E2996E /* map.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = map.mbtiles; path = Resources/maps/map.mbtiles; sourceTree = SOURCE_ROOT; };
-		93072EC21AEBA86A00E2996E /* test.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.mbtiles; path = Resources/maps/test.mbtiles; sourceTree = SOURCE_ROOT; };
+		935C84051AEBBC68008E2ACF /* track1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = track1.geojson; path = Resources/tracks/track1.geojson; sourceTree = SOURCE_ROOT; };
+		935C84071AEBBC80008E2ACF /* sofia.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = sofia.mbtiles; path = Resources/maps/sofia.mbtiles; sourceTree = SOURCE_ROOT; };
 		938D59461AEB8CFD008A2A49 /* bulgaria.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bulgaria.geojson; path = Resources/geojson/bulgaria.geojson; sourceTree = SOURCE_ROOT; };
 		938D594A1AEB8FCD008A2A49 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = UI/ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
 		938D594B1AEB8FCD008A2A49 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = UI/ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
@@ -137,11 +137,18 @@
 		93072EBF1AEBA85F00E2996E /* maps */ = {
 			isa = PBXGroup;
 			children = (
+				935C84071AEBBC80008E2ACF /* sofia.mbtiles */,
 				93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */,
-				93072EC11AEBA86A00E2996E /* map.mbtiles */,
-				93072EC21AEBA86A00E2996E /* test.mbtiles */,
 			);
 			name = maps;
+			sourceTree = "<group>";
+		};
+		935C84041AEBBC5A008E2ACF /* tracks */ = {
+			isa = PBXGroup;
+			children = (
+				935C84051AEBBC68008E2ACF /* track1.geojson */,
+			);
+			name = tracks;
 			sourceTree = "<group>";
 		};
 		938D59431AEB8B56008A2A49 /* geojson */ = {
@@ -261,6 +268,7 @@
 		939D962B1AEB7F0000BFDC21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				935C84041AEBBC5A008E2ACF /* tracks */,
 				93072EBF1AEBA85F00E2996E /* maps */,
 				938D59431AEB8B56008A2A49 /* geojson */,
 			);
@@ -393,10 +401,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93072EC51AEBA86A00E2996E /* test.mbtiles in Resources */,
+				935C84061AEBBC68008E2ACF /* track1.geojson in Resources */,
+				935C84081AEBBC80008E2ACF /* sofia.mbtiles in Resources */,
 				F8C9A1021AEBC0A9003CD6C9 /* FBAudienceNetwork.README.txt in Resources */,
 				939D96021AEB7B4000BFDC21 /* Main.storyboard in Resources */,
-				93072EC41AEBA86A00E2996E /* map.mbtiles in Resources */,
 				939D96071AEB7B4000BFDC21 /* LaunchScreen.xib in Resources */,
 				F8C9A1071AEBC0AA003CD6C9 /* LICENSE in Resources */,
 				93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */,
