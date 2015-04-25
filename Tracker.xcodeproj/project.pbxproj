@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93072EBE1AEB9E7500E2996E /* map.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EBD1AEB9E7500E2996E /* map.mbtiles */; };
 		938D59421AEB86BA008A2A49 /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 938D59411AEB86BA008A2A49 /* geography-class_medres.mbtiles */; };
 		938D59471AEB8CFD008A2A49 /* bulgaria.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 938D59461AEB8CFD008A2A49 /* bulgaria.geojson */; };
 		938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594B1AEB8FCD008A2A49 /* FirstViewController.m */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93072EBD1AEB9E7500E2996E /* map.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = map.mbtiles; path = Resources/map.mbtiles; sourceTree = SOURCE_ROOT; };
 		938D59411AEB86BA008A2A49 /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = "geography-class_medres.mbtiles"; path = "Resources/geography-class_medres.mbtiles"; sourceTree = SOURCE_ROOT; };
 		938D59461AEB8CFD008A2A49 /* bulgaria.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bulgaria.geojson; path = Resources/geojson/bulgaria.geojson; sourceTree = SOURCE_ROOT; };
 		938D594A1AEB8FCD008A2A49 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = UI/ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 		939D962B1AEB7F0000BFDC21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				93072EBD1AEB9E7500E2996E /* map.mbtiles */,
 				938D59431AEB8B56008A2A49 /* geojson */,
 				938D59411AEB86BA008A2A49 /* geography-class_medres.mbtiles */,
 				939D962C1AEB7F0E00BFDC21 /* test.mbtiles */,
@@ -380,6 +383,7 @@
 			files = (
 				F8C9A1021AEBC0A9003CD6C9 /* FBAudienceNetwork.README.txt in Resources */,
 				939D96021AEB7B4000BFDC21 /* Main.storyboard in Resources */,
+				93072EBE1AEB9E7500E2996E /* map.mbtiles in Resources */,
 				939D96071AEB7B4000BFDC21 /* LaunchScreen.xib in Resources */,
 				F8C9A1071AEBC0AA003CD6C9 /* LICENSE in Resources */,
 				F8C9A1001AEBC0A9003CD6C9 /* FacebookSDK.strings in Resources */,
