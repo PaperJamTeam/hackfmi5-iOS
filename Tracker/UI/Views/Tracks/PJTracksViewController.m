@@ -8,6 +8,7 @@
 
 #import "PJTracksViewController.h"
 #import "PJTrackTableViewCell.h"
+#import "PJTrackDetailsViewController.h"
 
 @interface PJTracksViewController ()
 
@@ -26,9 +27,7 @@
     UINib *nib = [UINib nibWithNibName:@"PJTrackTableViewCell" bundle:nil];
     [_table registerNib:nib forCellReuseIdentifier:@"PJTrackTableViewCell"];
     
-    self.navigationItem.title = @"Regions";
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(back)];
-    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationItem.title = @"Tracks";
     
 }
 
@@ -87,7 +86,11 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *track = [_tracks objectAtIndex:indexPath.row];
-    NSLog(@"Clicked track with id %@", track[@"id"]);
+    
+    PJTrackDetailsViewController *modalController = [[PJTrackDetailsViewController alloc] initWithNibName:@"PJTrackDetailsViewController" bundle:nil];
+    [modalController setupWithTrackId:track[@"id"]];
+    [self.navigationController pushViewController:modalController animated:YES];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
