@@ -43,7 +43,7 @@
     
     // set up the data source
     MaplyMBTileSource *tileSource =
-    [[MaplyMBTileSource alloc] initWithMBTiles:@"test"];
+    [[MaplyMBTileSource alloc] initWithMBTiles:@"geography-class_medres"];
     
     // set up the layer
     MaplyQuadImageTilesLayer *layer =
