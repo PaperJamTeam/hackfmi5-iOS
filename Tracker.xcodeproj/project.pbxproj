@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		938D59421AEB86BA008A2A49 /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 938D59411AEB86BA008A2A49 /* geography-class_medres.mbtiles */; };
 		938D59471AEB8CFD008A2A49 /* bulgaria.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 938D59461AEB8CFD008A2A49 /* bulgaria.geojson */; };
+		938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594B1AEB8FCD008A2A49 /* FirstViewController.m */; };
+		938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594D1AEB8FCD008A2A49 /* SecondViewController.m */; };
 		939D95F61AEB7B4000BFDC21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F51AEB7B4000BFDC21 /* main.m */; };
 		939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F81AEB7B4000BFDC21 /* AppDelegate.m */; };
-		939D95FC1AEB7B4000BFDC21 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95FB1AEB7B4000BFDC21 /* FirstViewController.m */; };
-		939D95FF1AEB7B4000BFDC21 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95FE1AEB7B4000BFDC21 /* SecondViewController.m */; };
 		939D96021AEB7B4000BFDC21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939D96001AEB7B4000BFDC21 /* Main.storyboard */; };
 		939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939D96031AEB7B4000BFDC21 /* Images.xcassets */; };
 		939D96071AEB7B4000BFDC21 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 939D96051AEB7B4000BFDC21 /* LaunchScreen.xib */; };
@@ -39,15 +39,15 @@
 /* Begin PBXFileReference section */
 		938D59411AEB86BA008A2A49 /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = "geography-class_medres.mbtiles"; path = "Resources/geography-class_medres.mbtiles"; sourceTree = SOURCE_ROOT; };
 		938D59461AEB8CFD008A2A49 /* bulgaria.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bulgaria.geojson; path = Resources/geojson/bulgaria.geojson; sourceTree = SOURCE_ROOT; };
+		938D594A1AEB8FCD008A2A49 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = UI/ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
+		938D594B1AEB8FCD008A2A49 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = UI/ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
+		938D594C1AEB8FCD008A2A49 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = UI/ViewControllers/SecondViewController.h; sourceTree = "<group>"; };
+		938D594D1AEB8FCD008A2A49 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = UI/ViewControllers/SecondViewController.m; sourceTree = "<group>"; };
 		939D95F01AEB7B4000BFDC21 /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939D95F41AEB7B4000BFDC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939D95F51AEB7B4000BFDC21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		939D95F71AEB7B4000BFDC21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		939D95F81AEB7B4000BFDC21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		939D95FA1AEB7B4000BFDC21 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		939D95FB1AEB7B4000BFDC21 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		939D95FD1AEB7B4000BFDC21 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		939D95FE1AEB7B4000BFDC21 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		939D96011AEB7B4000BFDC21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		939D96031AEB7B4000BFDC21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		939D96061AEB7B4000BFDC21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -95,6 +95,41 @@
 			name = geojson;
 			sourceTree = "<group>";
 		};
+		938D59481AEB8FB9008A2A49 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				938D59491AEB8FC3008A2A49 /* ViewControllers */,
+				938D59501AEB8FED008A2A49 /* Views */,
+				938D59511AEB8FF2008A2A49 /* Nibs */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		938D59491AEB8FC3008A2A49 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				938D594A1AEB8FCD008A2A49 /* FirstViewController.h */,
+				938D594B1AEB8FCD008A2A49 /* FirstViewController.m */,
+				938D594C1AEB8FCD008A2A49 /* SecondViewController.h */,
+				938D594D1AEB8FCD008A2A49 /* SecondViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		938D59501AEB8FED008A2A49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		938D59511AEB8FF2008A2A49 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
 		939D95E71AEB7B4000BFDC21 = {
 			isa = PBXGroup;
 			children = (
@@ -116,17 +151,14 @@
 		939D95F21AEB7B4000BFDC21 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				939D962B1AEB7F0000BFDC21 /* Resources */,
 				939D961C1AEB7B5600BFDC21 /* Libraries */,
 				939D95F71AEB7B4000BFDC21 /* AppDelegate.h */,
 				939D95F81AEB7B4000BFDC21 /* AppDelegate.m */,
-				939D95FA1AEB7B4000BFDC21 /* FirstViewController.h */,
-				939D95FB1AEB7B4000BFDC21 /* FirstViewController.m */,
-				939D95FD1AEB7B4000BFDC21 /* SecondViewController.h */,
-				939D95FE1AEB7B4000BFDC21 /* SecondViewController.m */,
 				939D96001AEB7B4000BFDC21 /* Main.storyboard */,
 				939D96031AEB7B4000BFDC21 /* Images.xcassets */,
 				939D96051AEB7B4000BFDC21 /* LaunchScreen.xib */,
+				938D59481AEB8FB9008A2A49 /* UI */,
+				939D962B1AEB7F0000BFDC21 /* Resources */,
 				939D95F31AEB7B4000BFDC21 /* Supporting Files */,
 			);
 			path = Tracker;
@@ -284,9 +316,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				939D95FF1AEB7B4000BFDC21 /* SecondViewController.m in Sources */,
+				938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */,
 				939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */,
-				939D95FC1AEB7B4000BFDC21 /* FirstViewController.m in Sources */,
+				938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */,
 				939D95F61AEB7B4000BFDC21 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
