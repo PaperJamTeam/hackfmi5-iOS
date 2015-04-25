@@ -42,21 +42,23 @@
     // and thirty fps if we can get it ­ change this to 3 if you find your app is struggling
     theViewC.frameInterval = 2;
     
-    // set up the data source
-    MaplyMBTileSource *tileSource =
-    [[MaplyMBTileSource alloc] initWithMBTiles:@"map"];
-    
-    // set up the layer
-    MaplyQuadImageTilesLayer *layer =
-    [[MaplyQuadImageTilesLayer alloc] initWithCoordSystem:tileSource.coordSys
-                                               tileSource:tileSource];
-    layer.handleEdges = (globeViewC != nil);
-    layer.coverPoles = (globeViewC != nil);
-    layer.requireElev = false;
-    layer.waitLoad = false;
-    layer.drawPriority = 0;
-    layer.singleLevelLoading = false;
-    [theViewC addLayer:layer];
+    // Add Sofia map
+    {
+        MaplyMBTileSource *tileSource =
+        [[MaplyMBTileSource alloc] initWithMBTiles:@"sofia"];
+        
+        // set up the layer
+        MaplyQuadImageTilesLayer *layer =
+        [[MaplyQuadImageTilesLayer alloc] initWithCoordSystem:tileSource.coordSys
+                                                   tileSource:tileSource];
+        layer.handleEdges = (globeViewC != nil);
+        layer.coverPoles = (globeViewC != nil);
+        layer.requireElev = false;
+        layer.waitLoad = false;
+        layer.drawPriority = 0;
+        layer.singleLevelLoading = false;
+        [theViewC addLayer:layer];
+    }
     
     if (globeViewC != nil)
     {
@@ -72,7 +74,7 @@
     
     // set the vector characteristics to be pretty and selectable
     vectorDict = @{
-                   kMaplyColor: [UIColor whiteColor],
+                   kMaplyColor: [UIColor redColor],
                    kMaplySelectable: @(true),
                    kMaplyVecWidth: @(4.0)};
     
