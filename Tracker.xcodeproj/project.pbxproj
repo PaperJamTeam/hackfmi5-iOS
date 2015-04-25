@@ -14,13 +14,13 @@
 		938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59541AEB90F5008A2A49 /* ALView+PureLayout.m */; };
 		938D595D1AEB90F5008A2A49 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59561AEB90F5008A2A49 /* NSArray+PureLayout.m */; };
 		938D595E1AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59581AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.m */; };
+		938D59611AEB9181008A2A49 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D59601AEB9181008A2A49 /* WhirlyGlobeMaplyComponent.framework */; };
 		939D95F61AEB7B4000BFDC21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F51AEB7B4000BFDC21 /* main.m */; };
 		939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F81AEB7B4000BFDC21 /* AppDelegate.m */; };
 		939D96021AEB7B4000BFDC21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939D96001AEB7B4000BFDC21 /* Main.storyboard */; };
 		939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939D96031AEB7B4000BFDC21 /* Images.xcassets */; };
 		939D96071AEB7B4000BFDC21 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 939D96051AEB7B4000BFDC21 /* LaunchScreen.xib */; };
 		939D96131AEB7B4000BFDC21 /* TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D96121AEB7B4000BFDC21 /* TrackerTests.m */; };
-		939D96201AEB7BD000BFDC21 /* WhirlyGlobeMaplyComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D961F1AEB7BD000BFDC21 /* WhirlyGlobeMaplyComponent.framework */; };
 		939D96221AEB7BD600BFDC21 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96211AEB7BD600BFDC21 /* CoreLocation.framework */; };
 		939D96241AEB7BDB00BFDC21 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96231AEB7BDB00BFDC21 /* libsqlite3.dylib */; };
 		939D96261AEB7BDE00BFDC21 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96251AEB7BDE00BFDC21 /* libz.dylib */; };
@@ -55,6 +55,7 @@
 		938D59591AEB90F5008A2A49 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = Libraries/PureLayout/PureLayout.h; sourceTree = SOURCE_ROOT; };
 		938D595A1AEB90F5008A2A49 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "Libraries/PureLayout/PureLayout+Internal.h"; sourceTree = SOURCE_ROOT; };
 		938D595B1AEB90F5008A2A49 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = Libraries/PureLayout/PureLayoutDefines.h; sourceTree = SOURCE_ROOT; };
+		938D59601AEB9181008A2A49 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = Libraries/Maply/WhirlyGlobeMaplyComponent.framework; sourceTree = SOURCE_ROOT; };
 		939D95F01AEB7B4000BFDC21 /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939D95F41AEB7B4000BFDC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939D95F51AEB7B4000BFDC21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		939D960C1AEB7B4000BFDC21 /* TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		939D96111AEB7B4000BFDC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939D96121AEB7B4000BFDC21 /* TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerTests.m; sourceTree = "<group>"; };
-		939D961F1AEB7BD000BFDC21 /* WhirlyGlobeMaplyComponent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WhirlyGlobeMaplyComponent.framework; path = Libraries/WhirlyGlobeMaplyComponent.framework; sourceTree = SOURCE_ROOT; };
 		939D96211AEB7BD600BFDC21 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		939D96231AEB7BDB00BFDC21 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		939D96251AEB7BDE00BFDC21 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -85,7 +85,7 @@
 				939D96261AEB7BDE00BFDC21 /* libz.dylib in Frameworks */,
 				939D96241AEB7BDB00BFDC21 /* libsqlite3.dylib in Frameworks */,
 				939D96221AEB7BD600BFDC21 /* CoreLocation.framework in Frameworks */,
-				939D96201AEB7BD000BFDC21 /* WhirlyGlobeMaplyComponent.framework in Frameworks */,
+				938D59611AEB9181008A2A49 /* WhirlyGlobeMaplyComponent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +158,19 @@
 			name = PureLayout;
 			sourceTree = "<group>";
 		};
+		938D595F1AEB9178008A2A49 /* Maply */ = {
+			isa = PBXGroup;
+			children = (
+				939D96291AEB7BF000BFDC21 /* libxml2.dylib */,
+				939D96271AEB7BE300BFDC21 /* libc++.dylib */,
+				939D96251AEB7BDE00BFDC21 /* libz.dylib */,
+				939D96231AEB7BDB00BFDC21 /* libsqlite3.dylib */,
+				939D96211AEB7BD600BFDC21 /* CoreLocation.framework */,
+				938D59601AEB9181008A2A49 /* WhirlyGlobeMaplyComponent.framework */,
+			);
+			name = Maply;
+			sourceTree = "<group>";
+		};
 		939D95E71AEB7B4000BFDC21 = {
 			isa = PBXGroup;
 			children = (
@@ -221,13 +234,8 @@
 		939D961C1AEB7B5600BFDC21 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				938D595F1AEB9178008A2A49 /* Maply */,
 				938D59521AEB90E4008A2A49 /* PureLayout */,
-				939D96291AEB7BF000BFDC21 /* libxml2.dylib */,
-				939D96271AEB7BE300BFDC21 /* libc++.dylib */,
-				939D96251AEB7BDE00BFDC21 /* libz.dylib */,
-				939D96231AEB7BDB00BFDC21 /* libsqlite3.dylib */,
-				939D96211AEB7BD600BFDC21 /* CoreLocation.framework */,
-				939D961F1AEB7BD000BFDC21 /* WhirlyGlobeMaplyComponent.framework */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -432,7 +440,7 @@
 					"values>",
 					Libraries/WhirlyGlobeMaplyComponent.framework/Headers/,
 				);
-				"HEADER_SEARCH_PATHS[arch=*]" = Libraries/WhirlyGlobeMaplyComponent.framework/Headers/;
+				"HEADER_SEARCH_PATHS[arch=*]" = Libraries/Maply/WhirlyGlobeMaplyComponent.framework/Headers/;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -473,7 +481,7 @@
 					"values>",
 					Libraries/WhirlyGlobeMaplyComponent.framework/Headers/,
 				);
-				"HEADER_SEARCH_PATHS[arch=*]" = Libraries/WhirlyGlobeMaplyComponent.framework/Headers/;
+				"HEADER_SEARCH_PATHS[arch=*]" = Libraries/Maply/WhirlyGlobeMaplyComponent.framework/Headers/;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -489,6 +497,7 @@
 					"$(inherited)",
 					/Users/ivokanchev/Downloads/WhirlyGlobe_Maply_Distribution_2_3,
 					"$(PROJECT_DIR)/Libraries",
+					"$(PROJECT_DIR)/Libraries/Maply",
 				);
 				INFOPLIST_FILE = Tracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -504,6 +513,7 @@
 					"$(inherited)",
 					/Users/ivokanchev/Downloads/WhirlyGlobe_Maply_Distribution_2_3,
 					"$(PROJECT_DIR)/Libraries",
+					"$(PROJECT_DIR)/Libraries/Maply",
 				);
 				INFOPLIST_FILE = Tracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
