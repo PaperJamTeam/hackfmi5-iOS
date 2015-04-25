@@ -10,6 +10,8 @@
 		93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */; };
 		935C84061AEBBC68008E2ACF /* track1.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 935C84051AEBBC68008E2ACF /* track1.geojson */; };
 		935C84081AEBBC80008E2ACF /* sofia.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 935C84071AEBBC80008E2ACF /* sofia.mbtiles */; };
+		935C840C1AEBBD73008E2ACF /* PJLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 935C840B1AEBBD73008E2ACF /* PJLocationManager.m */; };
+		935C840E1AEBC2A7008E2ACF /* lozenetsLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 935C840D1AEBC2A7008E2ACF /* lozenetsLocation.gpx */; };
 		938D594E1AEB8FCD008A2A49 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594B1AEB8FCD008A2A49 /* FirstViewController.m */; };
 		938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594D1AEB8FCD008A2A49 /* SecondViewController.m */; };
 		938D595C1AEB90F5008A2A49 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D59541AEB90F5008A2A49 /* ALView+PureLayout.m */; };
@@ -56,6 +58,9 @@
 		93072EC01AEBA86A00E2996E /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = "geography-class_medres.mbtiles"; path = "Resources/maps/geography-class_medres.mbtiles"; sourceTree = SOURCE_ROOT; };
 		935C84051AEBBC68008E2ACF /* track1.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = track1.geojson; path = Resources/tracks/track1.geojson; sourceTree = SOURCE_ROOT; };
 		935C84071AEBBC80008E2ACF /* sofia.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = sofia.mbtiles; path = Resources/maps/sofia.mbtiles; sourceTree = SOURCE_ROOT; };
+		935C840A1AEBBD73008E2ACF /* PJLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJLocationManager.h; path = Utils/PJLocationManager.h; sourceTree = SOURCE_ROOT; };
+		935C840B1AEBBD73008E2ACF /* PJLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJLocationManager.m; path = Utils/PJLocationManager.m; sourceTree = SOURCE_ROOT; };
+		935C840D1AEBC2A7008E2ACF /* lozenetsLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = lozenetsLocation.gpx; path = ../../Desktop/lozenetsLocation.gpx; sourceTree = "<group>"; };
 		938D59461AEB8CFD008A2A49 /* bulgaria.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bulgaria.geojson; path = Resources/geojson/bulgaria.geojson; sourceTree = SOURCE_ROOT; };
 		938D594A1AEB8FCD008A2A49 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = UI/ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
 		938D594B1AEB8FCD008A2A49 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = UI/ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
@@ -149,6 +154,15 @@
 			name = tracks;
 			sourceTree = "<group>";
 		};
+		935C84091AEBBD16008E2ACF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				935C840A1AEBBD73008E2ACF /* PJLocationManager.h */,
+				935C840B1AEBBD73008E2ACF /* PJLocationManager.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		938D59431AEB8B56008A2A49 /* geojson */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +209,7 @@
 		939D95E71AEB7B4000BFDC21 = {
 			isa = PBXGroup;
 			children = (
+				935C840D1AEBC2A7008E2ACF /* lozenetsLocation.gpx */,
 				939D95F21AEB7B4000BFDC21 /* Tracker */,
 				939D960F1AEB7B4000BFDC21 /* TrackerTests */,
 				939D95F11AEB7B4000BFDC21 /* Products */,
@@ -213,6 +228,7 @@
 		939D95F21AEB7B4000BFDC21 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				935C84091AEBBD16008E2ACF /* Utils */,
 				939D961C1AEB7B5600BFDC21 /* Libraries */,
 				939D95F71AEB7B4000BFDC21 /* AppDelegate.h */,
 				939D95F81AEB7B4000BFDC21 /* AppDelegate.m */,
@@ -407,6 +423,7 @@
 				93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */,
 				F8C9A1001AEBC0A9003CD6C9 /* FacebookSDK.strings in Resources */,
 				F8C9A1081AEBC0AA003CD6C9 /* README.txt in Resources */,
+				935C840E1AEBC2A7008E2ACF /* lozenetsLocation.gpx in Resources */,
 				939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				938D595E1AEB90F5008A2A49 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				935C840C1AEBBD73008E2ACF /* PJLocationManager.m in Sources */,
 				F8AA15DB1AEBC2D700DFD241 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */,
 				939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */,
@@ -578,6 +596,10 @@
 				);
 				INFOPLIST_FILE = Tracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/Maply/WhirlyGlobeMaplyComponent.framework/Versions/A",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -596,6 +618,10 @@
 				);
 				INFOPLIST_FILE = Tracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries/Maply/WhirlyGlobeMaplyComponent.framework/Versions/A",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

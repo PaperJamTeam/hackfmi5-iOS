@@ -7,11 +7,20 @@
 //
 
 #import "FirstViewController.h"
-#import <WhirlyGlobeMaplyComponent/WhirlyGlobeComponent.h>
+#import <WhirlyGlobeComponent.h>
 #import "MaplyComponent.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface FirstViewController ()
+@interface FirstViewController () <CLLocationManagerDelegate>
+
+@property(strong, nonatomic) CLLocationManager *locationManager;
+@property(strong, nonatomic) CLLocation *currentLocation;
+
+@property(strong, nonatomic) MaplyScreenMarker *currentLocationMarker;
+@property(strong, nonatomic) MaplyComponentObject *currentLocationMarkerObj;
+
 - (void) addCountries;
+
 @end
 
 @implementation FirstViewController {
@@ -21,6 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self initializeLocationManager];
+    self.currentLocation = [[CLLocation alloc] initWithLatitude:42.678098 longitude:23.327055];
     
     theViewC = [[MaplyViewController alloc] init];
     [self.view addSubview:theViewC.view];
@@ -60,6 +72,24 @@
         [theViewC addLayer:layer];
     }
     
+    // Add world map
+    {
+        MaplyMBTileSource *tileSource =
+        [[MaplyMBTileSource alloc] initWithMBTiles:@"geography-class_medres"];
+        
+        // set up the layer
+        MaplyQuadImageTilesLayer *layer =
+        [[MaplyQuadImageTilesLayer alloc] initWithCoordSystem:tileSource.coordSys
+                                                   tileSource:tileSource];
+        layer.handleEdges = (globeViewC != nil);
+        layer.coverPoles = (globeViewC != nil);
+        layer.requireElev = false;
+        layer.waitLoad = false;
+        layer.drawPriority = 0;
+        layer.singleLevelLoading = false;
+        [theViewC addLayer:layer];
+    }
+    
     if (globeViewC != nil)
     {
         globeViewC.height = 0.01;
@@ -75,13 +105,13 @@
     // set the vector characteristics to be pretty and selectable
     vectorDict = @{
                    kMaplyColor: [UIColor redColor],
-                   kMaplySelectable: @(true),
                    kMaplyVecWidth: @(4.0)};
     
     // add the countries
     [self addCountries];
     
-    
+    [self updateCurrentLocationPointer];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -133,5 +163,48 @@
 }
 
 
+
+#pragma mark CLLocationManager related methods
+- (void)initializeLocationManager
+{
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    self.locationManager.delegate = self;
+    self.currentLocation = [[CLLocation alloc] init];
+    if([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [self.locationManager requestAlwaysAuthorization];
+        // Or [self.locationManager requestWhenInUseAuthorization];
+    }
+    [self.locationManager startUpdatingLocation];
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    self.currentLocation = locations.lastObject;
+    [self updateCurrentLocationPointer];
+}
+
+#pragma mark Current Location Marker related methods
+- (void)updateCurrentLocationPointer
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        if(!self.currentLocationMarker) {
+            self.currentLocationMarker = [[MaplyScreenMarker alloc] init];
+            self.currentLocationMarker.rotation = M_PI;
+            self.currentLocationMarker.loc = MaplyCoordinateMakeWithDegrees(self.currentLocation.coordinate.longitude, self.currentLocation.coordinate.latitude);
+            self.currentLocationMarker.size = CGSizeMake(.00040, .00040);
+
+            self.currentLocationMarker.image = [UIImage imageNamed:@"map-pointer"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.currentLocationMarkerObj = [theViewC addMarkers:@[self.currentLocationMarker] desc:nil];
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.currentLocationMarker.loc = MaplyCoordinateMakeWithDegrees(self.currentLocation.coordinate.longitude, self.currentLocation.coordinate.latitude);
+                [theViewC removeObject:self.currentLocationMarkerObj];
+                self.currentLocationMarkerObj = [theViewC addMarkers:@[self.currentLocationMarker] desc:nil];
+            });
+        }
+    });
+}
 
 @end
