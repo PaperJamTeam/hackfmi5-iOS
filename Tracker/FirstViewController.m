@@ -11,11 +11,12 @@
 #import "MaplyComponent.h"
 
 @interface FirstViewController ()
-
+- (void) addCountries;
 @end
 
 @implementation FirstViewController {
     MaplyBaseViewController *theViewC;
+    NSDictionary *vectorDict;
 }
 
 - (void)viewDidLoad {
@@ -68,11 +69,68 @@
         [mapViewC animateToPosition:MaplyCoordinateMakeWithDegrees(-122.4192,37.7793)
                                time:1.0];
     }
+    
+    
+    // set the vector characteristics to be pretty and selectable
+    vectorDict = @{
+                   kMaplyColor: [UIColor whiteColor],
+                   kMaplySelectable: @(true),
+                   kMaplyVecWidth: @(4.0)};
+    
+    // add the countries
+    [self addCountries];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+- (void)addCountries
+{
+    // handle this in another thread
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0),
+                   ^{
+                       NSArray *allOutlines = [[NSBundle mainBundle] pathsForResourcesOfType:@"geojson" inDirectory:nil];
+                       
+                       for (NSString *outlineFile in allOutlines)
+                       {
+                           NSData *jsonData = [NSData dataWithContentsOfFile:outlineFile];
+                           if (jsonData)
+                           {
+                               MaplyVectorObject *wgVecObj = [MaplyVectorObject VectorObjectFromGeoJSON:jsonData];
+                               
+                               // the admin tag from the country outline geojson has the country name ­ save
+                               NSString *vecName = [[wgVecObj attributes] objectForKey:@"ADMIN"];
+                               wgVecObj.userObject = vecName;
+                               
+                               // add the outline to our view
+                               MaplyComponentObject *compObj = [theViewC addVectors:[NSArray arrayWithObject:wgVecObj] desc:vectorDict];
+                               // If you ever intend to remove these, keep track of the MaplyComponentObjects above.
+                               
+//                               if ([vecName length] > 0)
+//                               {
+//                                   MaplyScreenLabel *label = [[MaplyScreenLabel alloc] init];
+//                                   label.text = vecName;
+//                                   label.loc = [wgVecObj center];
+//                                   label.selectable = true;
+//                                   [theViewC addScreenLabels:@[label] desc:
+//                                    @{
+//                                      kMaplyFont: [UIFont boldSystemFontOfSize:24.0],
+//                                      kMaplyTextOutlineColor: [UIColor blackColor],
+//                                      kMaplyTextOutlineSize: @(2.0),
+//                                      kMaplyColor: [UIColor whiteColor]
+//                                      }];
+//                               }
+                           }
+                       }
+                   });
+}
+
+
 
 @end

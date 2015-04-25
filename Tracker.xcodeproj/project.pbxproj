@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		938D59421AEB86BA008A2A49 /* geography-class_medres.mbtiles in Resources */ = {isa = PBXBuildFile; fileRef = 938D59411AEB86BA008A2A49 /* geography-class_medres.mbtiles */; };
+		938D59471AEB8CFD008A2A49 /* bulgaria.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 938D59461AEB8CFD008A2A49 /* bulgaria.geojson */; };
 		939D95F61AEB7B4000BFDC21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F51AEB7B4000BFDC21 /* main.m */; };
 		939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F81AEB7B4000BFDC21 /* AppDelegate.m */; };
 		939D95FC1AEB7B4000BFDC21 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95FB1AEB7B4000BFDC21 /* FirstViewController.m */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		938D59411AEB86BA008A2A49 /* geography-class_medres.mbtiles */ = {isa = PBXFileReference; lastKnownFileType = file; name = "geography-class_medres.mbtiles"; path = "Resources/geography-class_medres.mbtiles"; sourceTree = SOURCE_ROOT; };
+		938D59461AEB8CFD008A2A49 /* bulgaria.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bulgaria.geojson; path = Resources/geojson/bulgaria.geojson; sourceTree = SOURCE_ROOT; };
 		939D95F01AEB7B4000BFDC21 /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939D95F41AEB7B4000BFDC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939D95F51AEB7B4000BFDC21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		938D59431AEB8B56008A2A49 /* geojson */ = {
+			isa = PBXGroup;
+			children = (
+				938D59461AEB8CFD008A2A49 /* bulgaria.geojson */,
+			);
+			name = geojson;
+			sourceTree = "<group>";
+		};
 		939D95E71AEB7B4000BFDC21 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 		939D962B1AEB7F0000BFDC21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				938D59431AEB8B56008A2A49 /* geojson */,
 				938D59411AEB86BA008A2A49 /* geography-class_medres.mbtiles */,
 				939D962C1AEB7F0E00BFDC21 /* test.mbtiles */,
 			);
@@ -254,6 +265,7 @@
 				939D96071AEB7B4000BFDC21 /* LaunchScreen.xib in Resources */,
 				938D59421AEB86BA008A2A49 /* geography-class_medres.mbtiles in Resources */,
 				939D962D1AEB7F0E00BFDC21 /* test.mbtiles in Resources */,
+				938D59471AEB8CFD008A2A49 /* bulgaria.geojson in Resources */,
 				939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
