@@ -24,8 +24,8 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="2" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nx7-Jx-PSa">
-                        <rect key="frame" x="222" y="21" width="90" height="2"/>
+                    <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="2" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Nx7-Jx-PSa">
+                        <rect key="frame" x="262" y="21" width="50" height="2"/>
                     </progressView>
                 </subviews>
                 <constraints>

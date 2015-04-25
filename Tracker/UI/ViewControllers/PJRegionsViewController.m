@@ -59,7 +59,7 @@
         cell = [topLevelObjects objectAtIndex:0];
     }
     NSDictionary *region = [_regions objectAtIndex:indexPath.row];
-    //setup downloaded, downloading adn progress from core data
+    //setup downloaded, downloading adn progress from core data by id
     [cell setupWithName:region[@"name"] downloaded:NO downloading:NO progress:0];
     
     return cell;
