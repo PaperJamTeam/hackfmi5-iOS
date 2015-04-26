@@ -31,12 +31,26 @@
     self.navigationItem.leftBarButtonItem = backButton;
 
     _regions = @[@{
-                     @"name": @"Region 1",
+                     @"name": @"Sofia",
+                     @"downloaded": @YES,
+                     @"id": @"123"
+                     },
+                    @{
+                     @"name": @"Vitosha",
+                     @"progress": @(.45),
                      @"id": @"123"
                      },
                  @{
-                     @"name": @"Region 2",
+                     @"name": @"Rodopi",
                      @"id": @"234"
+                     },
+                 @{
+                     @"name": @"Rila",
+                     @"id": @"123"
+                     },
+                 @{
+                     @"name": @"Pirin",
+                     @"id": @"123"
                      }
                  ];
 }
@@ -61,7 +75,8 @@
     }
     NSDictionary *region = [_regions objectAtIndex:indexPath.row];
     //setup downloaded, downloading adn progress from core data by id
-    [cell setupWithName:region[@"name"] downloaded:NO downloading:NO progress:0];
+    
+    [cell setupWithName:region[@"name"] downloaded:[region[@"downloaded"] boolValue] downloading:(0!=[region[@"progress"] doubleValue]) progress:[region[@"progress"] doubleValue]];
     
     return cell;
 }

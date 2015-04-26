@@ -51,31 +51,26 @@
 -(void)setupWithTrackId:(NSString*)trackId
 {
     _trackInfo = @{
-                   @"name": @"Track 1",
-                   @"author": @"Fuckwad",
+                   @"name": @"FMI",
+                   @"author": @"D. Stanev",
                    @"id": @"123",
-                   @"thumbnail": @"https://cdn2.iconfinder.com/data/icons/ourea-icons/256/Mountain.png",
-                   @"time": @"1.5h",
-                   @"rating": @"85%",
-                   @"distance": @"3.5km",
-                   @"users": @"24",
-                   @"landmarks": @"12",
-                   @"description": @"I say things need saying because I want to say those things. Bitch.\nAlso, stuff and things and WORDS. MOAR WORDS GOD FUCKING DAMN IT!",
+                   @"thumbnail": @"http://isgt.fmi.uni-sofia.bg/images/fmi_medium.jpg",
+                   @"time": @"30min",
+                   @"rating": @"100%",
+                   @"distance": @"1km",
+                   @"users": @"1",
+                   @"landmarks": @"3",
+                   @"description": @"FMI is a pillar of education in Bulgaria, and one of the most organized places in the entire world",
                    @"reviews": @[
                            @{
-                               @"title": @"Bitch",
-                               @"author": @"Grueber",
-                               @"text": @"I likey the thingy you makey you shitpisscuntfuckcocksuckermotherfuckertitsfart, turd and twat."
+                               @"title": @"Kewel",
+                               @"author": @"I. Raychev",
+                               @"text": @"Best. Place. EU"
                                },
                            @{
-                               @"title": @"Ruby ruby ruby",
-                               @"author": @"Ahaaaaah",
-                               @"text": @"Do ya do ya do ya ahaaaah do this do this do this to me"
-                               },
-                           @{
-                               @"title": @"Ruby ruby ruby",
-                               @"author": @"Ahaaaaah",
-                               @"text": @"Do ya do ya do ya ahaaaah do this do this do this to me"
+                               @"title": @"FMI",
+                               @"author": @"G. Harizanov",
+                               @"text": @"FMI is FMI is FMI. I approve."
                                }
                            ]
                    };
