@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "PJRegionsViewController.h"
 #import "AddNewTrackViewController.h"
+#import "LandmarkViewTableViewController.h"
 
 @interface SecondViewController ()
 
@@ -70,7 +71,7 @@
 }
 
 -(void) testButtonPressed {
-    AddNewTrackViewController *modalController = [[AddNewTrackViewController alloc] initWithNibName:@"AddNewTrackViewController" bundle:nil];
+    LandmarkViewTableViewController *modalController = [[LandmarkViewTableViewController alloc] initWithNibName:@"AddNewTrackViewController" bundle:nil];
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:modalController];
     
