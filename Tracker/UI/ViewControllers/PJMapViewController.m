@@ -35,6 +35,7 @@
 @implementation PJMapViewController {
     MaplyViewController *theViewC;
     NSDictionary *vectorDict;
+    NSDictionary *sendPhotoDict;
 }
 
 - (void)viewDidLoad {
@@ -237,6 +238,15 @@
     } andFailure:^(NSError *error) {
         
     }];
+}
+
+-(void)sendCheckpoint
+{
+    NSString *title = [sendPhotoDict[@"field"] text];
+    UIImage *image = sendPhotoDict[@"image"];
+    [sendPhotoDict[@"field"] removeFromSuperview];
+    [sendPhotoDict[@"button"] removeFromSuperview];
+    sendPhotoDict = nil;
 }
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
