@@ -13,6 +13,7 @@
 #import "PJCurrentLocationMarkerView.h"
 #import "GpsDAO.h"
 #import "PureLayout.h"
+#import "CheckpointDAO.h"
 
 @interface PJMapViewController () <CLLocationManagerDelegate, MaplyViewControllerDelegate>
 
@@ -131,6 +132,24 @@
     
     [[[self tabBarController] tabBar] setHidden:YES];
 
+    
+    
+    
+    {
+        UIImage *image = [UIImage imageNamed:@"options"];
+        
+        Checkpoint *checkpoint = [[Checkpoint alloc] init];
+        checkpoint.title = @"HackFMI";
+        checkpoint.note = @"NOTE NOTE NOTE";
+        checkpoint.checkpoint_lat = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude];
+        checkpoint.checkpoint_lon = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude];
+        checkpoint.trackData = UIImageJPEGRepresentation(image, .7);
+        [CheckpointDAO postCheckpoint:checkpoint withCompletion:^(RKMappingResult *result) {
+            
+        } andFailure:^(NSError *error) {
+            
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -196,9 +215,28 @@
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
-    UIImage *image = info[UIImagePickerControllerEditedImage];
+//    UIImage *image = info[UIImagePickerControllerEditedImage];
     [picker dismissViewControllerAnimated:YES completion:nil];
-    //do stuff with image
+    
+    UIImage *image = [UIImage imageNamed:@"options"];
+    
+    Checkpoint *checkpoint = [[Checkpoint alloc] init];
+    
+//    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc] init];
+//    [dataDict setObject:[NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude] forKey:@"checkpoint_lat"];
+//    [dataDict setObject:[NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude] forKey:@"checkpoint_lon"];
+//    [dataDict setObject:UIImageJPEGRepresentation(image, .7) forKey:@"checkpoint_lat"];
+    
+    checkpoint.title = @"IMAGE TEST";
+    checkpoint.note = @"";
+    checkpoint.checkpoint_lat = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude];
+    checkpoint.checkpoint_lon = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude];
+    checkpoint.trackData = UIImageJPEGRepresentation(image, .7);
+    [CheckpointDAO postCheckpoint:checkpoint withCompletion:^(RKMappingResult *result) {
+        
+    } andFailure:^(NSError *error) {
+        
+    }];
 }
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {

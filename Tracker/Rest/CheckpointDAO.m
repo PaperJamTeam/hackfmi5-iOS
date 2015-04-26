@@ -28,6 +28,9 @@
     [manager addResponseDescriptor:responseDescriptor];
 
     
+//    [manager multipartFormRequestWithObject:checkpoint method:RKRequestMethodPOST path:@"checkpoint" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+//        <#code#>
+//    }
     [manager postObject:checkpoint path:@"checkpoint" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         //        NSLog(@"%@", operation);
         //        NSLog(@"%@", mappingResult);

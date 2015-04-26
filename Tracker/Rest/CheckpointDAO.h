@@ -11,5 +11,5 @@
 #import "Checkpoint.h"
 
 @interface CheckpointDAO : NSObject
-
++ (void)postCheckpoint:(Checkpoint *)checkpoint withCompletion:(void (^) (RKMappingResult*) )callback andFailure:(void (^) (NSError*))failure;
 @end
