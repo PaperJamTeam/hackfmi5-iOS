@@ -34,6 +34,7 @@
 @implementation PJMapViewController {
     MaplyViewController *theViewC;
     NSDictionary *vectorDict;
+    NSDictionary *sendPhotoDict;
 }
 
 - (void)viewDidLoad {
@@ -197,8 +198,35 @@
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *image = info[UIImagePickerControllerEditedImage];
-    [picker dismissViewControllerAnimated:YES completion:nil];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        UITextField *titleField = [[UITextField alloc] init];
+        [titleField setBackgroundColor:[UIColor whiteColor]];
+        [titleField setFrame:CGRectMake(50, self.view.frame.size.height/2.0 - 20, 100, 40)];
+        [self.view addSubview:titleField];
+        
+        UIButton *sendButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [sendButton setTitle:@"Send" forState:UIControlStateNormal];
+        [sendButton setBackgroundColor:[UIColor whiteColor]];
+        [sendButton setFrame:CGRectMake(160, self.view.frame.size.height/2.0 - 20, 100, 40)];
+        [sendButton addTarget:self action:@selector(sendCheckpoint) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:sendButton];
+        
+        sendPhotoDict = @{
+                          @"button": sendButton,
+                          @"field": titleField,
+                          @"image": image
+                          };
+    }];
     //do stuff with image
+}
+
+-(void)sendCheckpoint
+{
+    NSString *title = [sendPhotoDict[@"field"] text];
+    UIImage *image = sendPhotoDict[@"image"];
+    [sendPhotoDict[@"field"] removeFromSuperview];
+    [sendPhotoDict[@"button"] removeFromSuperview];
+    sendPhotoDict = nil;
 }
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
