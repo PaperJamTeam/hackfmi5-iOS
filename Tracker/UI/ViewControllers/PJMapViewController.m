@@ -136,21 +136,22 @@
     
     
     
-    {
-        UIImage *image = [UIImage imageNamed:@"options"];
-        
-        Checkpoint *checkpoint = [[Checkpoint alloc] init];
-        checkpoint.title = @"HackFMI";
-        checkpoint.note = @"NOTE NOTE NOTE";
-        checkpoint.checkpoint_lat = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude];
-        checkpoint.checkpoint_lon = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude];
-        checkpoint.trackData = UIImageJPEGRepresentation(image, .7);
-        [CheckpointDAO postCheckpoint:checkpoint withCompletion:^(RKMappingResult *result) {
-            
-        } andFailure:^(NSError *error) {
-            
-        }];
-    }
+//    {
+//        UIImage *image = [UIImage imageNamed:@"options"];
+//        
+//        Checkpoint *checkpoint = [[Checkpoint alloc] init];
+//        checkpoint.imageName = image.
+//        checkpoint.title = @"HackFMI";
+//        checkpoint.note = @"NOTE NOTE NOTE";
+//        checkpoint.checkpoint_lat = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude];
+//        checkpoint.checkpoint_lon = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude];
+//        checkpoint.trackData = UIImageJPEGRepresentation(image, .7);
+//        [CheckpointDAO postCheckpoint:checkpoint withCompletion:^(RKMappingResult *result) {
+//            
+//        } andFailure:^(NSError *error) {
+//            
+//        }];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -214,28 +215,40 @@
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
     
-//    UIImage *image = info[UIImagePickerControllerEditedImage];
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    
-    UIImage *image = [UIImage imageNamed:@"options"];
+    UIImage *image = info[UIImagePickerControllerEditedImage];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        UITextField *titleField = [[UITextField alloc] init];
+        [titleField setBackgroundColor:[UIColor whiteColor]];
+        [titleField setFrame:CGRectMake(50, self.view.frame.size.height/2.0 - 20, 100, 40)];
+        [self.view addSubview:titleField];
+
+        UIButton *sendButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [sendButton setTitle:@"Send" forState:UIControlStateNormal];
+        [sendButton setBackgroundColor:[UIColor whiteColor]];
+        [sendButton setFrame:CGRectMake(160, self.view.frame.size.height/2.0 - 20, 100, 40)];
+        [sendButton addTarget:self action:@selector(sendCheckpoint) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:sendButton];
+
+        sendPhotoDict = @{
+                          @"button": sendButton,
+                          @"field": titleField,
+                          @"image": image
+                          };
+       }];
     
     Checkpoint *checkpoint = [[Checkpoint alloc] init];
-    
-//    NSMutableDictionary *dataDict = [[NSMutableDictionary alloc] init];
-//    [dataDict setObject:[NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude] forKey:@"checkpoint_lat"];
-//    [dataDict setObject:[NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude] forKey:@"checkpoint_lon"];
-//    [dataDict setObject:UIImageJPEGRepresentation(image, .7) forKey:@"checkpoint_lat"];
-    
     checkpoint.title = @"IMAGE TEST";
     checkpoint.note = @"";
     checkpoint.checkpoint_lat = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude];
     checkpoint.checkpoint_lon = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude];
     checkpoint.trackData = UIImageJPEGRepresentation(image, .7);
     [CheckpointDAO postCheckpoint:checkpoint withCompletion:^(RKMappingResult *result) {
-        
+       
     } andFailure:^(NSError *error) {
+        
         
     }];
 }

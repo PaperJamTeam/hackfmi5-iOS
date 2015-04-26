@@ -14,4 +14,5 @@
 @property(strong, nonatomic) NSString *checkpoint_lon;
 @property(strong, nonatomic) NSString *note;
 @property(strong, nonatomic) NSData *trackData;
+@property(strong, nonatomic) NSString *imageName;
 @end
