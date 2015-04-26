@@ -65,6 +65,9 @@
 		F80D1E911AECDE5500A142EC /* AddNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80D1E8C1AECDE5500A142EC /* AddNoteTableViewCell.xib */; };
 		F80D1E921AECDE5500A142EC /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F80D1E8E1AECDE5500A142EC /* AddNoteViewController.m */; };
 		F80D1E931AECDE5500A142EC /* AddNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80D1E8F1AECDE5500A142EC /* AddNoteViewController.xib */; };
+		F80D1E9C1AED034C00A142EC /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F80D1E9B1AED034C00A142EC /* delete@2x.png */; };
+		F80D1EA21AED087400A142EC /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80D1EA11AED087400A142EC /* SettingsView.xib */; };
+		F80D1EA41AED0E6F00A142EC /* rr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F80D1EA31AED0E6F00A142EC /* rr@2x.png */; };
 		F83D80961AEBC04800F31961 /* PJCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D80951AEBC04800F31961 /* PJCoreDataManager.m */; };
 		F83D809C1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F83D809A1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld */; };
 		F83D80A01AEBC53700F31961 /* PJRegionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D809E1AEBC53700F31961 /* PJRegionTableViewCell.m */; };
@@ -208,6 +211,9 @@
 		F80D1E8D1AECDE5500A142EC /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNoteViewController.h; path = Landmarks/AddNoteViewController.h; sourceTree = "<group>"; };
 		F80D1E8E1AECDE5500A142EC /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNoteViewController.m; path = Landmarks/AddNoteViewController.m; sourceTree = "<group>"; };
 		F80D1E8F1AECDE5500A142EC /* AddNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNoteViewController.xib; path = Landmarks/AddNoteViewController.xib; sourceTree = "<group>"; };
+		F80D1E9B1AED034C00A142EC /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "delete@2x.png"; path = "Resources/Images/delete@2x.png"; sourceTree = SOURCE_ROOT; };
+		F80D1EA11AED087400A142EC /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsView.xib; path = ../SettingsView.xib; sourceTree = "<group>"; };
+		F80D1EA31AED0E6F00A142EC /* rr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rr@2x.png"; path = "Resources/Images/rr@2x.png"; sourceTree = SOURCE_ROOT; };
 		F83D80941AEBC04800F31961 /* PJCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PJ\U0010CoreDataManager.h"; path = "CoreData/PJ\U0010CoreDataManager.h"; sourceTree = "<group>"; };
 		F83D80951AEBC04800F31961 /* PJCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PJ\U0010CoreDataManager.m"; path = "CoreData/PJ\U0010CoreDataManager.m"; sourceTree = "<group>"; };
 		F83D809B1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackerDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -393,6 +399,7 @@
 		938D59501AEB8FED008A2A49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F80D1EA11AED087400A142EC /* SettingsView.xib */,
 				9341FCB51AEC475600307BC1 /* Tracks */,
 				9341FCAF1AEC46F300307BC1 /* Maps */,
 				A7EE4C641AEBE4800062D775 /* Landmarks */,
@@ -532,6 +539,8 @@
 			isa = PBXGroup;
 			children = (
 				9341FCD91AEC496A00307BC1 /* landmark@2x.png */,
+				F80D1EA31AED0E6F00A142EC /* rr@2x.png */,
+				F80D1E9B1AED034C00A142EC /* delete@2x.png */,
 				9341FCDA1AEC496A00307BC1 /* person@2x.png */,
 				9341FCC01AEC47A200307BC1 /* clock@2x.png */,
 				9341FCC11AEC47A200307BC1 /* flag@2x.png */,
@@ -736,10 +745,12 @@
 				9341FCBD1AEC476400307BC1 /* PJTracksViewController.xib in Resources */,
 				935C84081AEBBC80008E2ACF /* sofia.mbtiles in Resources */,
 				A7EE4C6B1AEBE4C50062D775 /* AddNewTrackViewController.xib in Resources */,
+				F80D1EA41AED0E6F00A142EC /* rr@2x.png in Resources */,
 				A7EE4C7F1AEC01100062D775 /* selectInsertTypeViewController.xib in Resources */,
 				F8C9A1021AEBC0A9003CD6C9 /* FBAudienceNetwork.README.txt in Resources */,
 				F8C9A1071AEBC0AA003CD6C9 /* LICENSE in Resources */,
 				93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */,
+				F80D1EA21AED087400A142EC /* SettingsView.xib in Resources */,
 				9341FCDB1AEC496A00307BC1 /* landmark@2x.png in Resources */,
 				9341FCDC1AEC496A00307BC1 /* person@2x.png in Resources */,
 				F83D80A11AEBC53700F31961 /* PJRegionTableViewCell.xib in Resources */,
@@ -755,6 +766,7 @@
 				9341FCC51AEC47A200307BC1 /* thumbs_up@2x.png in Resources */,
 				F8C9A1081AEBC0AA003CD6C9 /* README.txt in Resources */,
 				A7EE4C781AEBF1050062D775 /* add-new-plus-button_318-9157.jpg in Resources */,
+				F80D1E9C1AED034C00A142EC /* delete@2x.png in Resources */,
 				F80D1E931AECDE5500A142EC /* AddNoteViewController.xib in Resources */,
 				939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */,
 			);

@@ -102,7 +102,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self showSettings];
+}
 
+-(void)showSettings
+{
+    UIView *settingsView = [[[NSBundle mainBundle] loadNibNamed:@"SettingsView" owner:nil options:nil] objectAtIndex:0];
+    [self.view addSubview:settingsView];
+}
 
 - (void)addCountries
 {
