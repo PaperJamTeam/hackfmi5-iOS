@@ -52,6 +52,13 @@
 		939D96261AEB7BDE00BFDC21 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96251AEB7BDE00BFDC21 /* libz.dylib */; };
 		939D96281AEB7BE300BFDC21 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96271AEB7BE300BFDC21 /* libc++.dylib */; };
 		939D962A1AEB7BF000BFDC21 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 939D96291AEB7BF000BFDC21 /* libxml2.dylib */; };
+		A78FB41E1AECF1C700CE1030 /* LandmarkViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78FB41C1AECF1C700CE1030 /* LandmarkViewTableViewController.m */; };
+		A78FB41F1AECF1C700CE1030 /* LandmarkViewTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78FB41D1AECF1C700CE1030 /* LandmarkViewTableViewController.xib */; };
+		A78FB4251AECF87300CE1030 /* AudioCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78FB4241AECF87300CE1030 /* AudioCellTableViewCell.xib */; };
+		A78FB4291AECFD4B00CE1030 /* playNow.png in Resources */ = {isa = PBXBuildFile; fileRef = A78FB4281AECFD4B00CE1030 /* playNow.png */; };
+		A78FB42E1AED070F00CE1030 /* waterfall1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A78FB42B1AED070F00CE1030 /* waterfall1.jpg */; };
+		A78FB42F1AED070F00CE1030 /* waterfall2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A78FB42C1AED070F00CE1030 /* waterfall2.jpg */; };
+		A78FB4301AED070F00CE1030 /* waterfall3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A78FB42D1AED070F00CE1030 /* waterfall3.jpg */; };
 		A7EE4C6A1AEBE4C50062D775 /* AddNewTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EE4C671AEBE4C50062D775 /* AddNewTrackViewController.m */; };
 		A7EE4C6B1AEBE4C50062D775 /* AddNewTrackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EE4C681AEBE4C50062D775 /* AddNewTrackViewController.xib */; };
 		A7EE4C6F1AEBE7170062D775 /* NewLandmarkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EE4C6D1AEBE7170062D775 /* NewLandmarkTableViewCell.m */; };
@@ -67,6 +74,9 @@
 		F80D1E911AECDE5500A142EC /* AddNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80D1E8C1AECDE5500A142EC /* AddNoteTableViewCell.xib */; };
 		F80D1E921AECDE5500A142EC /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F80D1E8E1AECDE5500A142EC /* AddNoteViewController.m */; };
 		F80D1E931AECDE5500A142EC /* AddNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80D1E8F1AECDE5500A142EC /* AddNoteViewController.xib */; };
+		F80D1E9C1AED034C00A142EC /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F80D1E9B1AED034C00A142EC /* delete@2x.png */; };
+		F80D1EA21AED087400A142EC /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80D1EA11AED087400A142EC /* SettingsView.xib */; };
+		F80D1EA41AED0E6F00A142EC /* rr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F80D1EA31AED0E6F00A142EC /* rr@2x.png */; };
 		F83D80961AEBC04800F31961 /* PJCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D80951AEBC04800F31961 /* PJCoreDataManager.m */; };
 		F83D809C1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F83D809A1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld */; };
 		F83D80A01AEBC53700F31961 /* PJRegionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D809E1AEBC53700F31961 /* PJRegionTableViewCell.m */; };
@@ -192,6 +202,14 @@
 		939D96251AEB7BDE00BFDC21 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		939D96271AEB7BE300BFDC21 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		939D96291AEB7BF000BFDC21 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		A78FB41B1AECF1C700CE1030 /* LandmarkViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandmarkViewTableViewController.h; path = Landmarks/LandmarkViewTableViewController.h; sourceTree = "<group>"; };
+		A78FB41C1AECF1C700CE1030 /* LandmarkViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandmarkViewTableViewController.m; path = Landmarks/LandmarkViewTableViewController.m; sourceTree = "<group>"; };
+		A78FB41D1AECF1C700CE1030 /* LandmarkViewTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LandmarkViewTableViewController.xib; path = Landmarks/LandmarkViewTableViewController.xib; sourceTree = "<group>"; };
+		A78FB4241AECF87300CE1030 /* AudioCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AudioCellTableViewCell.xib; path = Landmarks/AudioCellTableViewCell.xib; sourceTree = "<group>"; };
+		A78FB4281AECFD4B00CE1030 /* playNow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playNow.png; sourceTree = "<group>"; };
+		A78FB42B1AED070F00CE1030 /* waterfall1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waterfall1.jpg; sourceTree = "<group>"; };
+		A78FB42C1AED070F00CE1030 /* waterfall2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waterfall2.jpg; sourceTree = "<group>"; };
+		A78FB42D1AED070F00CE1030 /* waterfall3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waterfall3.jpg; sourceTree = "<group>"; };
 		A7EE4C661AEBE4C50062D775 /* AddNewTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNewTrackViewController.h; path = Landmarks/AddNewTrackViewController.h; sourceTree = "<group>"; };
 		A7EE4C671AEBE4C50062D775 /* AddNewTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNewTrackViewController.m; path = Landmarks/AddNewTrackViewController.m; sourceTree = "<group>"; };
 		A7EE4C681AEBE4C50062D775 /* AddNewTrackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNewTrackViewController.xib; path = Landmarks/AddNewTrackViewController.xib; sourceTree = "<group>"; };
@@ -214,6 +232,9 @@
 		F80D1E8D1AECDE5500A142EC /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNoteViewController.h; path = Landmarks/AddNoteViewController.h; sourceTree = "<group>"; };
 		F80D1E8E1AECDE5500A142EC /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNoteViewController.m; path = Landmarks/AddNoteViewController.m; sourceTree = "<group>"; };
 		F80D1E8F1AECDE5500A142EC /* AddNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNoteViewController.xib; path = Landmarks/AddNoteViewController.xib; sourceTree = "<group>"; };
+		F80D1E9B1AED034C00A142EC /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "delete@2x.png"; path = "Resources/Images/delete@2x.png"; sourceTree = SOURCE_ROOT; };
+		F80D1EA11AED087400A142EC /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsView.xib; path = ../SettingsView.xib; sourceTree = "<group>"; };
+		F80D1EA31AED0E6F00A142EC /* rr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rr@2x.png"; path = "Resources/Images/rr@2x.png"; sourceTree = SOURCE_ROOT; };
 		F83D80941AEBC04800F31961 /* PJCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PJ\U0010CoreDataManager.h"; path = "CoreData/PJ\U0010CoreDataManager.h"; sourceTree = "<group>"; };
 		F83D80951AEBC04800F31961 /* PJCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PJ\U0010CoreDataManager.m"; path = "CoreData/PJ\U0010CoreDataManager.m"; sourceTree = "<group>"; };
 		F83D809B1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackerDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -403,6 +424,7 @@
 		938D59501AEB8FED008A2A49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F80D1EA11AED087400A142EC /* SettingsView.xib */,
 				9341FCB51AEC475600307BC1 /* Tracks */,
 				9341FCAF1AEC46F300307BC1 /* Maps */,
 				A7EE4C641AEBE4800062D775 /* Landmarks */,
@@ -534,6 +556,10 @@
 				F80D1E8D1AECDE5500A142EC /* AddNoteViewController.h */,
 				F80D1E8E1AECDE5500A142EC /* AddNoteViewController.m */,
 				F80D1E8F1AECDE5500A142EC /* AddNoteViewController.xib */,
+				A78FB41B1AECF1C700CE1030 /* LandmarkViewTableViewController.h */,
+				A78FB41C1AECF1C700CE1030 /* LandmarkViewTableViewController.m */,
+				A78FB41D1AECF1C700CE1030 /* LandmarkViewTableViewController.xib */,
+				A78FB4241AECF87300CE1030 /* AudioCellTableViewCell.xib */,
 			);
 			name = Landmarks;
 			sourceTree = "<group>";
@@ -541,7 +567,13 @@
 		A7EE4C761AEBF0CB0062D775 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A78FB42B1AED070F00CE1030 /* waterfall1.jpg */,
+				A78FB42C1AED070F00CE1030 /* waterfall2.jpg */,
+				A78FB42D1AED070F00CE1030 /* waterfall3.jpg */,
+				A78FB4281AECFD4B00CE1030 /* playNow.png */,
 				9341FCD91AEC496A00307BC1 /* landmark@2x.png */,
+				F80D1EA31AED0E6F00A142EC /* rr@2x.png */,
+				F80D1E9B1AED034C00A142EC /* delete@2x.png */,
 				9341FCDA1AEC496A00307BC1 /* person@2x.png */,
 				9341FCC01AEC47A200307BC1 /* clock@2x.png */,
 				9341FCC11AEC47A200307BC1 /* flag@2x.png */,
@@ -737,36 +769,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78FB4251AECF87300CE1030 /* AudioCellTableViewCell.xib in Resources */,
 				A7EE4C701AEBE7170062D775 /* NewLandmarkTableViewCell.xib in Resources */,
 				9341FCC31AEC47A200307BC1 /* clock@2x.png in Resources */,
 				935C84061AEBBC68008E2ACF /* track1.geojson in Resources */,
+				A78FB4291AECFD4B00CE1030 /* playNow.png in Resources */,
 				9341FCCE1AEC47F400307BC1 /* Main.storyboard in Resources */,
 				F80D1E911AECDE5500A142EC /* AddNoteTableViewCell.xib in Resources */,
 				9341FCB31AEC470200307BC1 /* PJCurrentLocationMarker.xib in Resources */,
 				9341FCBD1AEC476400307BC1 /* PJTracksViewController.xib in Resources */,
 				935C84081AEBBC80008E2ACF /* sofia.mbtiles in Resources */,
 				A7EE4C6B1AEBE4C50062D775 /* AddNewTrackViewController.xib in Resources */,
+				F80D1EA41AED0E6F00A142EC /* rr@2x.png in Resources */,
 				A7EE4C7F1AEC01100062D775 /* selectInsertTypeViewController.xib in Resources */,
 				F8C9A1021AEBC0A9003CD6C9 /* FBAudienceNetwork.README.txt in Resources */,
 				F8C9A1071AEBC0AA003CD6C9 /* LICENSE in Resources */,
 				93072EC31AEBA86A00E2996E /* geography-class_medres.mbtiles in Resources */,
+				F80D1EA21AED087400A142EC /* SettingsView.xib in Resources */,
 				9341FCDB1AEC496A00307BC1 /* landmark@2x.png in Resources */,
+				A78FB42F1AED070F00CE1030 /* waterfall2.jpg in Resources */,
 				9341FCDC1AEC496A00307BC1 /* person@2x.png in Resources */,
 				F83D80A11AEBC53700F31961 /* PJRegionTableViewCell.xib in Resources */,
 				9341FCD81AEC492600307BC1 /* PJTrackReviewTableViewCell.xib in Resources */,
 				F83D80A71AEBCDDF00F31961 /* PJRegionsViewController.xib in Resources */,
 				9341FCBF1AEC476400307BC1 /* PJTrackTableViewCell.xib in Resources */,
+				A78FB4301AED070F00CE1030 /* waterfall3.jpg in Resources */,
 				9341FCC41AEC47A200307BC1 /* flag@2x.png in Resources */,
 				9341FCCD1AEC47F400307BC1 /* LaunchScreen.xib in Resources */,
 				9341FCD61AEC492600307BC1 /* PJTrackDetailsViewController.xib in Resources */,
+				A78FB42E1AED070F00CE1030 /* waterfall1.jpg in Resources */,
 				F8C9A1001AEBC0A9003CD6C9 /* FacebookSDK.strings in Resources */,
 				A7EE4C751AEBEFD60062D775 /* AddItemToNewLandmarkTableViewCell.xib in Resources */,
 				A7EE4C841AEC23480062D775 /* LandmarkPhotosTableViewCell.xib in Resources */,
 				9341FCC51AEC47A200307BC1 /* thumbs_up@2x.png in Resources */,
 				F8C9A1081AEBC0AA003CD6C9 /* README.txt in Resources */,
 				A7EE4C781AEBF1050062D775 /* add-new-plus-button_318-9157.jpg in Resources */,
+				F80D1E9C1AED034C00A142EC /* delete@2x.png in Resources */,
 				F80D1E931AECDE5500A142EC /* AddNoteViewController.xib in Resources */,
 				939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */,
+				A78FB41F1AECF1C700CE1030 /* LandmarkViewTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -787,6 +828,7 @@
 				F83D809C1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld in Sources */,
 				935C840C1AEBBD73008E2ACF /* PJLocationManager.m in Sources */,
 				938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */,
+				A78FB41E1AECF1C700CE1030 /* LandmarkViewTableViewController.m in Sources */,
 				A7EE4C6A1AEBE4C50062D775 /* AddNewTrackViewController.m in Sources */,
 				939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */,
 				F80D1E901AECDE5500A142EC /* AddNoteTableViewCell.m in Sources */,

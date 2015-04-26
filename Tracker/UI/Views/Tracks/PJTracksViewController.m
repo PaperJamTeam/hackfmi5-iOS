@@ -41,24 +41,24 @@
 
 -(void)setupWithRegionID:(NSString*)regionId
 {
-//    //get stuff for region ID
-//    _tracks = @[@{
-//                    @"name": @"Track 1",
-//                    @"id": @"123",
-//                    @"thumbnail": @"https://cdn2.iconfinder.com/data/icons/ourea-icons/256/Mountain.png",
-//                    @"time": @"1.5h",
-//                    @"rating": @"85%",
-//                    @"distance": @"3.5km"
-//                    },
-//                @{
-//                    @"name": @"Track 2",
-//                    @"id": @"123",
-//                    @"thumbnail": @"https://camo.githubusercontent.com/ba543b374dfbe40a51be45f148e717757957e741/687474703a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f332f33612f4d6f756e7461696e2d49636f6e2e7376672f31323870782d4d6f756e7461696e2d49636f6e2e7376672e706e67",
-//                    @"time": @"2.5h",
-//                    @"rating": @"67%",
-//                    @"distance": @"5.5km"
-//                    },
-//                ];
+    //get stuff for region ID
+    _tracks = @[@{
+                    @"name": @"Office",
+                    @"id": @"123",
+                    @"thumbnail": @"http://previewcf.turbosquid.com/Preview/2014/05/20__08_03_29/OfficeInterior02.jpgb61233eb-4f1b-4747-9e93-23d83468caf9Small.jpg",
+                    @"time": @"15min",
+                    @"rating": @"100%",
+                    @"distance": @"500m"
+                    },
+                @{
+                    @"name": @"FMI",
+                    @"id": @"123",
+                    @"thumbnail": @"http://isgt.fmi.uni-sofia.bg/images/fmi_medium.jpg",
+                    @"time": @"30min",
+                    @"rating": @"100%",
+                    @"distance": @"1km"
+                    },
+                ];
 }
 
 - (void)didReceiveMemoryWarning {
