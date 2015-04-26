@@ -108,7 +108,7 @@
         self.recordButton = [UIButton buttonWithType:UIButtonTypeSystem];
         self.recordButton.tintColor = [UIColor redColor];
         [self.recordButton setImage:[[UIImage imageNamed:@"record"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        self.recordButton.frame = CGRectMake(50, 620, 36, 36);
+        self.recordButton.frame = CGRectMake(10, 517, 36, 36);
         [self.view addSubview:self.recordButton];
     }
     
@@ -116,7 +116,8 @@
         self.settingsButton = [UIButton buttonWithType:UIButtonTypeSystem];
         [self.settingsButton setImage:[[UIImage imageNamed:@"options"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         self.settingsButton.tintColor = [UIColor blackColor];
-        self.settingsButton.frame = CGRectMake(330, 30, 30, 36);
+        self.settingsButton.frame = CGRectMake(275, 15, 30, 36);
+        [self.settingsButton addTarget:self action:@selector(showSettings) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:self.settingsButton];
     }
     
@@ -124,21 +125,17 @@
         self.regionsButton = [UIButton buttonWithType:UIButtonTypeSystem];
         [self.regionsButton setImage:[[UIImage imageNamed:@"region-button"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         self.regionsButton.tintColor = [UIColor blackColor];
-        self.regionsButton.frame = CGRectMake(280, 620, 36, 36);
+        self.regionsButton.frame = CGRectMake(270, 517, 36, 36);
         [self.view addSubview:self.regionsButton];
     }
+    
+    [[[self tabBarController] tabBar] setHidden:YES];
 
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self showSettings];
 }
 
 -(void)showSettings
