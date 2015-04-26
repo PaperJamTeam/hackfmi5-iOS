@@ -13,6 +13,7 @@
 #import "PJCurrentLocationMarkerView.h"
 #import "GpsDAO.h"
 #import "PureLayout.h"
+#import "AddNewTrackViewController.h"
 
 @interface PJMapViewController () <CLLocationManagerDelegate, MaplyViewControllerDelegate>
 
@@ -130,6 +131,10 @@
     }
     
     [[[self tabBarController] tabBar] setHidden:YES];
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector( didPressLong: )];
+    longPress.minimumPressDuration = 1;
+    longPress.allowableMovement = 1;
+    [self.view addGestureRecognizer:longPress];
 
 }
 
@@ -239,4 +244,50 @@
     }];
 }
 
+-(void) didPressLong :(UILongPressGestureRecognizer*)sender {
+    if ( sender.state == UIGestureRecognizerStateEnded) {
+        MaplyCoordinate locationForPin = [theViewC geoFromScreenPoint:[sender locationInView:self.view]];
+        MaplyAnnotation *annotation = [[MaplyAnnotation alloc] init];
+//        [annotation setTitle:@"Hello there"];
+        UILabel *addLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0, 70, 40)];
+        [addLabel setFont:[UIFont systemFontOfSize:12]];
+        [addLabel setLineBreakMode:NSLineBreakByWordWrapping];
+        [addLabel setTextAlignment:NSTextAlignmentCenter];
+        [addLabel setNumberOfLines:2];
+        [addLabel setText:@"Add new \nlandmark"];
+        UIView *addView = [[UIView alloc] initWithFrame:CGRectMake(0,0, 40, 40)];
+        UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeContactAdd];
+        [addBtn addTarget:self action:@selector(addNewAnnotation:forPoint:) forControlEvents:UIControlEventTouchUpInside];
+        [addBtn setFrame:CGRectMake(10, 10, 20, 20)];
+        [addView addSubview:addBtn];
+        [annotation setRightAccessoryView:addView];
+        [annotation setLeftAccessoryView:addLabel];
+        [theViewC addAnnotation:annotation forPoint:locationForPin offset:CGPointMake(0,0)];
+        
+        NSLog(@"LONG TAP ");
+    }
+}
+
+-(void) addNewAnnotation:(MaplyAnnotation*) annotation forPoint: (MaplyCoordinate*) coordinate {
+    AddNewTrackViewController *vc = [[AddNewTrackViewController alloc] init];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:vc];
+    [navC setTitle:@"Add new landmark"];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(submit)];
+    navC.navigationItem.leftBarButtonItem = backButton;
+    navC.navigationItem.rightBarButtonItem = doneButton;
+    [navC.navigationItem setTitle:@"Add new landmark"];
+    [self presentViewController:navC animated:YES completion:^(void){
+
+    }];
+}
+
+-(void) back {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+-(void) submit {
+    
+}
 @end

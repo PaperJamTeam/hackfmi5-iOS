@@ -40,11 +40,12 @@
     [self.tableView registerNib:nibForNotes forCellReuseIdentifier:@"AddNoteTableViewCell"];
     
     // NAVIGATION SECTION
-    self.navigationItem.title = @"Add new landmark";
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(back)];
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(submit)];
-    self.navigationItem.rightBarButtonItem = doneButton;
-    self.navigationItem.leftBarButtonItem = backButton;
+//    UINavigationItem *navItem = [[UINavigationItem alloc] initWithTitle:@"Add new landmark"];
+////    self.navigationItem.title = @"Add new landmark";
+//    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+//    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(submit)];
+//    navItem.rightBarButtonItem = doneButton;
+//    navItem.leftBarButtonItem = backButton;
     // Do any additional setup after loading the view from its nib.
     
 }
