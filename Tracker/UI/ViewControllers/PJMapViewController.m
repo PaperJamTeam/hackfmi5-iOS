@@ -35,6 +35,7 @@
 @implementation PJMapViewController {
     MaplyViewController *theViewC;
     NSDictionary *vectorDict;
+    NSDictionary *sendPhotoDict;
 }
 
 - (void)viewDidLoad {
@@ -118,7 +119,7 @@
         [self.settingsButton setImage:[[UIImage imageNamed:@"options"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         self.settingsButton.tintColor = [UIColor blackColor];
         self.settingsButton.frame = CGRectMake(275, 15, 30, 36);
-        [self.settingsButton addTarget:self action:@selector(showSettings) forControlEvents:UIControlEventTouchUpInside];
+        [self.settingsButton addTarget:self action:@selector(sendPhoto) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:self.settingsButton];
     }
     
@@ -136,6 +137,25 @@
     longPress.allowableMovement = 1;
     [self.view addGestureRecognizer:longPress];
 
+    
+    
+    
+//    {
+//        UIImage *image = [UIImage imageNamed:@"options"];
+//        
+//        Checkpoint *checkpoint = [[Checkpoint alloc] init];
+//        checkpoint.imageName = image.
+//        checkpoint.title = @"HackFMI";
+//        checkpoint.note = @"NOTE NOTE NOTE";
+//        checkpoint.checkpoint_lat = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude];
+//        checkpoint.checkpoint_lon = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude];
+//        checkpoint.trackData = UIImageJPEGRepresentation(image, .7);
+//        [CheckpointDAO postCheckpoint:checkpoint withCompletion:^(RKMappingResult *result) {
+//            
+//        } andFailure:^(NSError *error) {
+//            
+//        }];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -190,7 +210,65 @@
                    });
 }
 
+- (IBAction)sendPhoto {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
 
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    
+    UIImage *image = info[UIImagePickerControllerEditedImage];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        UITextField *titleField = [[UITextField alloc] init];
+        [titleField setBackgroundColor:[UIColor whiteColor]];
+        [titleField setFrame:CGRectMake(50, self.view.frame.size.height/2.0 - 20, 100, 40)];
+        [self.view addSubview:titleField];
+
+        UIButton *sendButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [sendButton setTitle:@"Send" forState:UIControlStateNormal];
+        [sendButton setBackgroundColor:[UIColor whiteColor]];
+        [sendButton setFrame:CGRectMake(160, self.view.frame.size.height/2.0 - 20, 100, 40)];
+        [sendButton addTarget:self action:@selector(sendCheckpoint) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:sendButton];
+
+        sendPhotoDict = @{
+                          @"button": sendButton,
+                          @"field": titleField,
+                          @"image": image
+                          };
+       }];
+    
+    Checkpoint *checkpoint = [[Checkpoint alloc] init];
+    checkpoint.title = @"IMAGE TEST";
+    checkpoint.note = @"";
+    checkpoint.checkpoint_lat = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude];
+    checkpoint.checkpoint_lon = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude];
+    checkpoint.trackData = UIImageJPEGRepresentation(image, .7);
+    [CheckpointDAO postCheckpoint:checkpoint withCompletion:^(RKMappingResult *result) {
+       
+    } andFailure:^(NSError *error) {
+        
+        
+    }];
+}
+
+-(void)sendCheckpoint
+{
+    NSString *title = [sendPhotoDict[@"field"] text];
+    UIImage *image = sendPhotoDict[@"image"];
+    [sendPhotoDict[@"field"] removeFromSuperview];
+    [sendPhotoDict[@"button"] removeFromSuperview];
+    sendPhotoDict = nil;
+}
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark CLLocationManager related methods
 - (void)initializeLocationManager
@@ -209,13 +287,15 @@
 {
     self.currentLocation = locations.lastObject;
     [self updateCurrentLocationPointer];
-//    [self sendCoordinates];
+    [self sendCoordinates];
 }
 
 #pragma mark Current Location Marker related methods
 - (void)updateCurrentLocationPointer
 {
     if(!self.currentLocationMarker) {
+        [theViewC animateToPosition:MaplyCoordinateMakeWithDegrees(self.currentLocation.coordinate.longitude, self.currentLocation.coordinate.latitude)
+                               time:1.0];
         self.currentPositionUpdateTimer = [NSTimer timerWithTimeInterval:0.0005 target:self selector:@selector(positionCurrentLocationPointer) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:self.currentPositionUpdateTimer forMode:NSDefaultRunLoopMode];
         self.currentLocationMarker = [PJCurrentLocationMarkerView viewWithNibName:@"PJCurrentLocationMarker" owner:self];
@@ -234,9 +314,9 @@
 -(void)sendCoordinates
 {
     GpsCoordinate *gpsCoord = [[GpsCoordinate alloc] init];
-    gpsCoord.deviceId = @"Ivan's iPhone";
-    gpsCoord.latitude = [NSNumber numberWithDouble:self.currentLocation.coordinate.latitude];
-    gpsCoord.longitude = [NSNumber numberWithDouble:self.currentLocation.coordinate.longitude];
+    gpsCoord.uuid = @"phone";
+    gpsCoord.lat = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude];
+    gpsCoord.lon = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude];
     [GpsDAO postGpsCoordinate:gpsCoord withCompletion:^(RKMappingResult *mappingResult) {
         NSLog(@"Sent realtime gps data with result: %@", mappingResult);
     } andFailure:^(NSError *error) {
