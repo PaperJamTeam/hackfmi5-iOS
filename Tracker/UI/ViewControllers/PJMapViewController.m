@@ -250,7 +250,7 @@
 {
     self.currentLocation = locations.lastObject;
     [self updateCurrentLocationPointer];
-    [self sendCoordinates];
+//    [self sendCoordinates];
 }
 
 #pragma mark Current Location Marker related methods

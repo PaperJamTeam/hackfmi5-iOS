@@ -43,6 +43,8 @@
 		938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594D1AEB8FCD008A2A49 /* SecondViewController.m */; };
 		93940BF91AECEA1C0028FCBD /* GpsDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 93940BF81AECEA1C0028FCBD /* GpsDAO.m */; };
 		93940C001AECF0E80028FCBD /* GpsCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93940BFF1AECF0E80028FCBD /* GpsCoordinate.m */; };
+		93940C041AED23220028FCBD /* CheckpointDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 93940C031AED23220028FCBD /* CheckpointDAO.m */; };
+		93940C0B1AED23380028FCBD /* Checkpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 93940C0A1AED23380028FCBD /* Checkpoint.m */; };
 		939D95F61AEB7B4000BFDC21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F51AEB7B4000BFDC21 /* main.m */; };
 		939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F81AEB7B4000BFDC21 /* AppDelegate.m */; };
 		939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939D96031AEB7B4000BFDC21 /* Images.xcassets */; };
@@ -188,6 +190,10 @@
 		93940BF81AECEA1C0028FCBD /* GpsDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GpsDAO.m; path = Rest/GpsDAO.m; sourceTree = "<group>"; };
 		93940BFE1AECF0E80028FCBD /* GpsCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GpsCoordinate.h; path = Model/GpsCoordinate.h; sourceTree = "<group>"; };
 		93940BFF1AECF0E80028FCBD /* GpsCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GpsCoordinate.m; path = Model/GpsCoordinate.m; sourceTree = "<group>"; };
+		93940C021AED23220028FCBD /* CheckpointDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckpointDAO.h; path = Rest/CheckpointDAO.h; sourceTree = "<group>"; };
+		93940C031AED23220028FCBD /* CheckpointDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckpointDAO.m; path = Rest/CheckpointDAO.m; sourceTree = "<group>"; };
+		93940C091AED23380028FCBD /* Checkpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Checkpoint.h; path = Model/Checkpoint.h; sourceTree = "<group>"; };
+		93940C0A1AED23380028FCBD /* Checkpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Checkpoint.m; path = Model/Checkpoint.m; sourceTree = "<group>"; };
 		939D95F01AEB7B4000BFDC21 /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939D95F41AEB7B4000BFDC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939D95F51AEB7B4000BFDC21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -349,6 +355,8 @@
 				9344972E1AEC7D830037C0A7 /* TrackDAO.m */,
 				93940BF71AECEA1C0028FCBD /* GpsDAO.h */,
 				93940BF81AECEA1C0028FCBD /* GpsDAO.m */,
+				93940C021AED23220028FCBD /* CheckpointDAO.h */,
+				93940C031AED23220028FCBD /* CheckpointDAO.m */,
 			);
 			name = Rest;
 			sourceTree = "<group>";
@@ -377,6 +385,8 @@
 				937E11F91AEC6B8400C86BE4 /* Track.m */,
 				93940BFE1AECF0E80028FCBD /* GpsCoordinate.h */,
 				93940BFF1AECF0E80028FCBD /* GpsCoordinate.m */,
+				93940C091AED23380028FCBD /* Checkpoint.h */,
+				93940C0A1AED23380028FCBD /* Checkpoint.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -825,6 +835,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93940C041AED23220028FCBD /* CheckpointDAO.m in Sources */,
+				93940C0B1AED23380028FCBD /* Checkpoint.m in Sources */,
 				F83D809C1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld in Sources */,
 				935C840C1AEBBD73008E2ACF /* PJLocationManager.m in Sources */,
 				938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */,
