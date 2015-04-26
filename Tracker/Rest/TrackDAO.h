@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface TrackDAO : NSObject
-+ (NSArray *)tracks;
++ (NSArray *)tracksWithBlock:(void (^) (NSArray*) )callback andError:(void (^) (NSError*))failure;
 @end

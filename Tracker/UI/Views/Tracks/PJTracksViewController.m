@@ -10,6 +10,7 @@
 #import "PJTrackTableViewCell.h"
 #import "PJTrackDetailsViewController.h"
 #import "TrackDAO.h"
+#import "Track.h"
 
 @interface PJTracksViewController ()
 
@@ -30,28 +31,32 @@
     
     self.navigationItem.title = @"Tracks";
     
-    NSObject *obj = [TrackDAO tracks];
-    NSLog(@"%@", obj);
+    [TrackDAO tracksWithBlock:^(NSArray *trackArray) {
+        _tracks = trackArray;
+        [_table reloadData];
+    } andError:^(NSError *error) {
+        NSLog(@"Failed with error: %@", error);
+    }];
 }
 
 -(void)setupWithRegionID:(NSString*)regionId
 {
     //get stuff for region ID
     _tracks = @[@{
-                    @"name": @"Track 1",
+                    @"name": @"Office",
                     @"id": @"123",
-                    @"thumbnail": @"https://cdn2.iconfinder.com/data/icons/ourea-icons/256/Mountain.png",
-                    @"time": @"1.5h",
-                    @"rating": @"85%",
-                    @"distance": @"3.5km"
+                    @"thumbnail": @"http://previewcf.turbosquid.com/Preview/2014/05/20__08_03_29/OfficeInterior02.jpgb61233eb-4f1b-4747-9e93-23d83468caf9Small.jpg",
+                    @"time": @"15min",
+                    @"rating": @"100%",
+                    @"distance": @"500m"
                     },
                 @{
-                    @"name": @"Track 2",
+                    @"name": @"FMI",
                     @"id": @"123",
-                    @"thumbnail": @"https://camo.githubusercontent.com/ba543b374dfbe40a51be45f148e717757957e741/687474703a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f332f33612f4d6f756e7461696e2d49636f6e2e7376672f31323870782d4d6f756e7461696e2d49636f6e2e7376672e706e67",
-                    @"time": @"2.5h",
-                    @"rating": @"67%",
-                    @"distance": @"5.5km"
+                    @"thumbnail": @"http://isgt.fmi.uni-sofia.bg/images/fmi_medium.jpg",
+                    @"time": @"30min",
+                    @"rating": @"100%",
+                    @"distance": @"1km"
                     },
                 ];
 }
@@ -74,9 +79,9 @@
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"PJTrackTableViewCell" owner:self options:nil];
         cell = [topLevelObjects objectAtIndex:0];
     }
-    NSDictionary *track = [_tracks objectAtIndex:indexPath.row];
+    Track *track = [_tracks objectAtIndex:indexPath.row];
     //setup downloaded, selected, downloading and progress from core data by id
-    [cell setupWithName:track[@"name"] thumbnailURL:track[@"thumbnail"] time:track[@"track"] rating:track[@"rating"] distance:track[@"distance"] downloaded:indexPath.row selected:NO downloading:1-indexPath.row progress:0.4];
+    [cell setupWithName:track.title thumbnailURL:@"https://camo.githubusercontent.com/ba543b374dfbe40a51be45f148e717757957e741/687474703a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f332f33612f4d6f756e7461696e2d49636f6e2e7376672f31323870782d4d6f756e7461696e2d49636f6e2e7376672e706e67" time:@"5 hours" rating:@"93%" distance:@"3" downloaded:indexPath.row selected:NO downloading:1-indexPath.row progress:0.4];
     
     return cell;
 }
