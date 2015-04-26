@@ -9,6 +9,7 @@
 #import "PJTracksViewController.h"
 #import "PJTrackTableViewCell.h"
 #import "PJTrackDetailsViewController.h"
+#import "TrackDAO.h"
 
 @interface PJTracksViewController ()
 
@@ -29,6 +30,8 @@
     
     self.navigationItem.title = @"Tracks";
     
+    NSObject *obj = [TrackDAO tracks];
+    NSLog(@"%@", obj);
 }
 
 -(void)setupWithRegionID:(NSString*)regionId

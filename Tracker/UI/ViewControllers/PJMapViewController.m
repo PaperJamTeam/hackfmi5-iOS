@@ -36,15 +36,11 @@
     [self initializeLocationManager];
     self.currentLocation = [[CLLocation alloc] initWithLatitude:42.678098 longitude:23.327055];
     
-    theViewC = [[MaplyViewController alloc] init];
+    theViewC = [[MaplyViewController alloc] initAsFlatMap];
     theViewC.delegate = self;
     [self.view addSubview:theViewC.view];
     theViewC.view.frame = self.view.bounds;
     [self addChildViewController:theViewC];
-    
-    for(UIPanGestureRecognizer *panGestureRecognizer in [theViewC.view.subviews[0] gestureRecognizers]) {
-        [panGestureRecognizer addTarget:self action:@selector(positionCurrentLocationPointer)];
-    }
     
     MaplyViewController *mapViewC = nil;
     mapViewC = (MaplyViewController *)theViewC;
