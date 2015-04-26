@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PJMapViewController : UIViewController
+@interface PJMapViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 
 @end

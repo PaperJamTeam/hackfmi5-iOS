@@ -117,7 +117,7 @@
         [self.settingsButton setImage:[[UIImage imageNamed:@"options"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         self.settingsButton.tintColor = [UIColor blackColor];
         self.settingsButton.frame = CGRectMake(275, 15, 30, 36);
-        [self.settingsButton addTarget:self action:@selector(showSettings) forControlEvents:UIControlEventTouchUpInside];
+        [self.settingsButton addTarget:self action:@selector(sendPhoto) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:self.settingsButton];
     }
     
@@ -185,7 +185,25 @@
                    });
 }
 
+- (IBAction)sendPhoto {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
 
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *image = info[UIImagePickerControllerEditedImage];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    //do stuff with image
+}
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark CLLocationManager related methods
 - (void)initializeLocationManager
