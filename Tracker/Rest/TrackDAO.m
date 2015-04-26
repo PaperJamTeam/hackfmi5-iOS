@@ -1,4 +1,4 @@
-//
+    //
 //  TrackDAO.m
 //  Tracker
 //
@@ -11,20 +11,19 @@
 #import "Track.h"
 
 @implementation TrackDAO
-+ (NSArray *)tracks
++ (NSArray *)tracksWithBlock:(void (^) (NSArray*) )callback andError:(void (^) (NSError*))failure
 {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[Track class]];
     [mapping addAttributeMappingsFromArray:@[@"_id", @"author", @"title", @"__v", @"checkpoints"]];
     NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful); // Anything in 2xx
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping method:RKRequestMethodAny pathPattern:@"/tracks/:id" keyPath:nil statusCodes:statusCodes];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping method:RKRequestMethodAny pathPattern:nil keyPath:nil statusCodes:statusCodes];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://harizanov.info/tracks/"]];
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
     [operation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-        Track *track = [result firstObject];
-        NSLog(@"%@", result);
-        NSLog(@"Mapped the article: %@", track);
+        callback([result array]);
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        failure(error);
         NSLog(@"Failed with error: %@", [error localizedDescription]);
     }];
     [operation start];

@@ -11,6 +11,8 @@
 #import "MaplyComponent.h"
 #import <CoreLocation/CoreLocation.h>
 #import "PJCurrentLocationMarkerView.h"
+#import "GpsDAO.h"
+#import "PureLayout.h"
 
 @interface PJMapViewController () <CLLocationManagerDelegate, MaplyViewControllerDelegate>
 
@@ -20,6 +22,10 @@
 @property(strong, nonatomic) PJCurrentLocationMarkerView *currentLocationMarker;
 
 @property(strong, nonatomic) NSTimer *currentPositionUpdateTimer;
+
+@property(strong, nonatomic) UIButton *recordButton;
+@property(strong, nonatomic) UIButton *settingsButton;
+@property(strong, nonatomic) UIButton *regionsButton;
 
 - (void) addCountries;
 
@@ -32,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [self initializeLocationManager];
     self.currentLocation = [[CLLocation alloc] initWithLatitude:42.678098 longitude:23.327055];
     
@@ -67,23 +73,23 @@
         [theViewC addLayer:layer];
     }
     
-    // Add world map
-    {
-        MaplyMBTileSource *tileSource =
-        [[MaplyMBTileSource alloc] initWithMBTiles:@"geography-class_medres"];
-        
-        // set up the layer
-        MaplyQuadImageTilesLayer *layer =
-        [[MaplyQuadImageTilesLayer alloc] initWithCoordSystem:tileSource.coordSys
-                                                   tileSource:tileSource];
-        layer.requireElev = false;
-        layer.waitLoad = false;
-        layer.drawPriority = 0;
-        layer.singleLevelLoading = false;
-        [theViewC addLayer:layer];
-    }
+//    // Add world map
+//    {
+//        MaplyMBTileSource *tileSource =
+//        [[MaplyMBTileSource alloc] initWithMBTiles:@"geography-class_medres"];
+//        
+//        // set up the layer
+//        MaplyQuadImageTilesLayer *layer =
+//        [[MaplyQuadImageTilesLayer alloc] initWithCoordSystem:tileSource.coordSys
+//                                                   tileSource:tileSource];
+//        layer.requireElev = false;
+//        layer.waitLoad = false;
+//        layer.drawPriority = 0;
+//        layer.singleLevelLoading = false;
+//        [theViewC addLayer:layer];
+//    }
 
-    mapViewC.height = 0.01;
+    mapViewC.height = 0.001;
     [mapViewC animateToPosition:MaplyCoordinateMakeWithDegrees(23.3306,42.6744)
                                time:1.0];
     
@@ -95,6 +101,33 @@
     
     // add the countries
     [self addCountries];
+    
+    
+    //setup buttons
+    {
+        self.recordButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        self.recordButton.tintColor = [UIColor redColor];
+        [self.recordButton setImage:[[UIImage imageNamed:@"record"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        self.recordButton.frame = CGRectMake(50, 620, 36, 36);
+        [self.view addSubview:self.recordButton];
+    }
+    
+    {
+        self.settingsButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [self.settingsButton setImage:[[UIImage imageNamed:@"options"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        self.settingsButton.tintColor = [UIColor blackColor];
+        self.settingsButton.frame = CGRectMake(330, 30, 30, 36);
+        [self.view addSubview:self.settingsButton];
+    }
+    
+    {
+        self.regionsButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [self.regionsButton setImage:[[UIImage imageNamed:@"region-button"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        self.regionsButton.tintColor = [UIColor blackColor];
+        self.regionsButton.frame = CGRectMake(280, 620, 36, 36);
+        [self.view addSubview:self.regionsButton];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -174,6 +207,7 @@
 {
     self.currentLocation = locations.lastObject;
     [self updateCurrentLocationPointer];
+//    [self sendCoordinates];
 }
 
 #pragma mark Current Location Marker related methods
@@ -192,6 +226,20 @@
 {
     CGPoint screenPointFromCoordinate = [theViewC screenPointFromGeo:MaplyCoordinateMakeWithDegrees(self.currentLocation.coordinate.longitude, self.currentLocation.coordinate.latitude)];
     self.currentLocationMarker.frame = CGRectMake(screenPointFromCoordinate.x - self.currentLocationMarker.frame.size.width/2,screenPointFromCoordinate.y - self.currentLocationMarker.frame.size.height,self.currentLocationMarker.frame.size.width, self.currentLocationMarker.frame.size.height);
+}
+
+#pragma mark Rest related
+-(void)sendCoordinates
+{
+    GpsCoordinate *gpsCoord = [[GpsCoordinate alloc] init];
+    gpsCoord.deviceId = @"Ivan's iPhone";
+    gpsCoord.latitude = [NSNumber numberWithDouble:self.currentLocation.coordinate.latitude];
+    gpsCoord.longitude = [NSNumber numberWithDouble:self.currentLocation.coordinate.longitude];
+    [GpsDAO postGpsCoordinate:gpsCoord withCompletion:^(RKMappingResult *mappingResult) {
+        NSLog(@"Sent realtime gps data with result: %@", mappingResult);
+    } andFailure:^(NSError *error) {
+        NSLog(@"Failed sending realtime gps data with error: %@", error);
+    }];
 }
 
 @end
