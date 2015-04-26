@@ -7,9 +7,10 @@
 //
 
 #import "selectInsertTypeViewController.h"
+#import "AddNoteViewController.h"
 
 @interface selectInsertTypeViewController ()
-- (IBAction)NoteButtonClicked:(id)sender;
+- (IBAction)noteButtonClicked:(id)sender;
 - (IBAction)pictureButtonClicked:(id)sender;
 - (IBAction)voiceNoteButtonClicked:(id)sender;
 @property (strong) UIImageView *imageSelected;
@@ -40,8 +41,12 @@
 }
 */
 
-- (IBAction)NoteButtonClicked:(id)sender {
-    NSLog(@"NOTE !");
+- (IBAction)noteButtonClicked:(id)sender {
+    AddNoteViewController *anvc = [[AddNoteViewController alloc] init];
+    anvc.delegate = self.delegate;
+    [self presentViewController:anvc animated:YES completion:nil];
+    
+   
 }
 
 - (IBAction)pictureButtonClicked:(id)sender {
@@ -83,6 +88,9 @@
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)backButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

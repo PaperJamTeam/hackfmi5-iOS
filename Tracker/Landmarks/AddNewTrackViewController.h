@@ -10,8 +10,9 @@
 
 @protocol chosenInsertTypeDelegate
 -(void)didChooseImage: (UIImageView*) image;
+-(void)addNoteWithTitle:(NSString*)title andText:(NSString*)text;
 @end
 
-@interface AddNewTrackViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface AddNewTrackViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, chosenInsertTypeDelegate>
 
 @end

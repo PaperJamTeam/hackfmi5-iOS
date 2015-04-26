@@ -61,6 +61,10 @@
 		A7EE4C7F1AEC01100062D775 /* selectInsertTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EE4C7D1AEC01100062D775 /* selectInsertTypeViewController.xib */; };
 		A7EE4C831AEC23480062D775 /* LandmarkPhotosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EE4C811AEC23480062D775 /* LandmarkPhotosTableViewCell.m */; };
 		A7EE4C841AEC23480062D775 /* LandmarkPhotosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EE4C821AEC23480062D775 /* LandmarkPhotosTableViewCell.xib */; };
+		F80D1E901AECDE5500A142EC /* AddNoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F80D1E8B1AECDE5500A142EC /* AddNoteTableViewCell.m */; };
+		F80D1E911AECDE5500A142EC /* AddNoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80D1E8C1AECDE5500A142EC /* AddNoteTableViewCell.xib */; };
+		F80D1E921AECDE5500A142EC /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F80D1E8E1AECDE5500A142EC /* AddNoteViewController.m */; };
+		F80D1E931AECDE5500A142EC /* AddNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F80D1E8F1AECDE5500A142EC /* AddNoteViewController.xib */; };
 		F83D80961AEBC04800F31961 /* PJCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D80951AEBC04800F31961 /* PJCoreDataManager.m */; };
 		F83D809C1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F83D809A1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodeld */; };
 		F83D80A01AEBC53700F31961 /* PJRegionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F83D809E1AEBC53700F31961 /* PJRegionTableViewCell.m */; };
@@ -198,6 +202,12 @@
 		A7EE4C801AEC23480062D775 /* LandmarkPhotosTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandmarkPhotosTableViewCell.h; path = Landmarks/LandmarkPhotosTableViewCell.h; sourceTree = "<group>"; };
 		A7EE4C811AEC23480062D775 /* LandmarkPhotosTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandmarkPhotosTableViewCell.m; path = Landmarks/LandmarkPhotosTableViewCell.m; sourceTree = "<group>"; };
 		A7EE4C821AEC23480062D775 /* LandmarkPhotosTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LandmarkPhotosTableViewCell.xib; path = Landmarks/LandmarkPhotosTableViewCell.xib; sourceTree = "<group>"; };
+		F80D1E8A1AECDE5500A142EC /* AddNoteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNoteTableViewCell.h; path = Landmarks/AddNoteTableViewCell.h; sourceTree = "<group>"; };
+		F80D1E8B1AECDE5500A142EC /* AddNoteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNoteTableViewCell.m; path = Landmarks/AddNoteTableViewCell.m; sourceTree = "<group>"; };
+		F80D1E8C1AECDE5500A142EC /* AddNoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNoteTableViewCell.xib; path = Landmarks/AddNoteTableViewCell.xib; sourceTree = "<group>"; };
+		F80D1E8D1AECDE5500A142EC /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddNoteViewController.h; path = Landmarks/AddNoteViewController.h; sourceTree = "<group>"; };
+		F80D1E8E1AECDE5500A142EC /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddNoteViewController.m; path = Landmarks/AddNoteViewController.m; sourceTree = "<group>"; };
+		F80D1E8F1AECDE5500A142EC /* AddNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddNoteViewController.xib; path = Landmarks/AddNoteViewController.xib; sourceTree = "<group>"; };
 		F83D80941AEBC04800F31961 /* PJCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PJ\U0010CoreDataManager.h"; path = "CoreData/PJ\U0010CoreDataManager.h"; sourceTree = "<group>"; };
 		F83D80951AEBC04800F31961 /* PJCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PJ\U0010CoreDataManager.m"; path = "CoreData/PJ\U0010CoreDataManager.m"; sourceTree = "<group>"; };
 		F83D809B1AEBC0EC00F31961 /* TrackerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrackerDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -508,6 +518,12 @@
 				A7EE4C801AEC23480062D775 /* LandmarkPhotosTableViewCell.h */,
 				A7EE4C811AEC23480062D775 /* LandmarkPhotosTableViewCell.m */,
 				A7EE4C821AEC23480062D775 /* LandmarkPhotosTableViewCell.xib */,
+				F80D1E8A1AECDE5500A142EC /* AddNoteTableViewCell.h */,
+				F80D1E8B1AECDE5500A142EC /* AddNoteTableViewCell.m */,
+				F80D1E8C1AECDE5500A142EC /* AddNoteTableViewCell.xib */,
+				F80D1E8D1AECDE5500A142EC /* AddNoteViewController.h */,
+				F80D1E8E1AECDE5500A142EC /* AddNoteViewController.m */,
+				F80D1E8F1AECDE5500A142EC /* AddNoteViewController.xib */,
 			);
 			name = Landmarks;
 			sourceTree = "<group>";
@@ -715,6 +731,7 @@
 				9341FCC31AEC47A200307BC1 /* clock@2x.png in Resources */,
 				935C84061AEBBC68008E2ACF /* track1.geojson in Resources */,
 				9341FCCE1AEC47F400307BC1 /* Main.storyboard in Resources */,
+				F80D1E911AECDE5500A142EC /* AddNoteTableViewCell.xib in Resources */,
 				9341FCB31AEC470200307BC1 /* PJCurrentLocationMarker.xib in Resources */,
 				9341FCBD1AEC476400307BC1 /* PJTracksViewController.xib in Resources */,
 				935C84081AEBBC80008E2ACF /* sofia.mbtiles in Resources */,
@@ -738,6 +755,7 @@
 				9341FCC51AEC47A200307BC1 /* thumbs_up@2x.png in Resources */,
 				F8C9A1081AEBC0AA003CD6C9 /* README.txt in Resources */,
 				A7EE4C781AEBF1050062D775 /* add-new-plus-button_318-9157.jpg in Resources */,
+				F80D1E931AECDE5500A142EC /* AddNoteViewController.xib in Resources */,
 				939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,6 +779,7 @@
 				938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */,
 				A7EE4C6A1AEBE4C50062D775 /* AddNewTrackViewController.m in Sources */,
 				939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */,
+				F80D1E901AECDE5500A142EC /* AddNoteTableViewCell.m in Sources */,
 				A7EE4C7E1AEC01100062D775 /* selectInsertTypeViewController.m in Sources */,
 				938D594E1AEB8FCD008A2A49 /* PJMapViewController.m in Sources */,
 				9341FCD51AEC492600307BC1 /* PJTrackDetailsViewController.m in Sources */,
@@ -771,6 +790,7 @@
 				9341FCB41AEC470200307BC1 /* PJCurrentLocationMarkerView.m in Sources */,
 				A7EE4C6F1AEBE7170062D775 /* NewLandmarkTableViewCell.m in Sources */,
 				A7EE4C831AEC23480062D775 /* LandmarkPhotosTableViewCell.m in Sources */,
+				F80D1E921AECDE5500A142EC /* AddNoteViewController.m in Sources */,
 				9341FCAB1AEC46CD00307BC1 /* ALView+PureLayout.m in Sources */,
 				F83D80A61AEBCDDF00F31961 /* PJRegionsViewController.m in Sources */,
 				9341FCAE1AEC46DA00307BC1 /* NSArray+PureLayout.m in Sources */,
