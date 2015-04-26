@@ -211,6 +211,8 @@
 - (void)updateCurrentLocationPointer
 {
     if(!self.currentLocationMarker) {
+        [theViewC animateToPosition:MaplyCoordinateMakeWithDegrees(self.currentLocation.coordinate.longitude, self.currentLocation.coordinate.latitude)
+                               time:1.0];
         self.currentPositionUpdateTimer = [NSTimer timerWithTimeInterval:0.0005 target:self selector:@selector(positionCurrentLocationPointer) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:self.currentPositionUpdateTimer forMode:NSDefaultRunLoopMode];
         self.currentLocationMarker = [PJCurrentLocationMarkerView viewWithNibName:@"PJCurrentLocationMarker" owner:self];
