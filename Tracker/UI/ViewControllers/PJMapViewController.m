@@ -222,13 +222,15 @@
 {
     self.currentLocation = locations.lastObject;
     [self updateCurrentLocationPointer];
-//    [self sendCoordinates];
+    [self sendCoordinates];
 }
 
 #pragma mark Current Location Marker related methods
 - (void)updateCurrentLocationPointer
 {
     if(!self.currentLocationMarker) {
+        [theViewC animateToPosition:MaplyCoordinateMakeWithDegrees(self.currentLocation.coordinate.longitude, self.currentLocation.coordinate.latitude)
+                               time:1.0];
         self.currentPositionUpdateTimer = [NSTimer timerWithTimeInterval:0.0005 target:self selector:@selector(positionCurrentLocationPointer) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:self.currentPositionUpdateTimer forMode:NSDefaultRunLoopMode];
         self.currentLocationMarker = [PJCurrentLocationMarkerView viewWithNibName:@"PJCurrentLocationMarker" owner:self];
@@ -247,9 +249,9 @@
 -(void)sendCoordinates
 {
     GpsCoordinate *gpsCoord = [[GpsCoordinate alloc] init];
-    gpsCoord.deviceId = @"Ivan's iPhone";
-    gpsCoord.latitude = [NSNumber numberWithDouble:self.currentLocation.coordinate.latitude];
-    gpsCoord.longitude = [NSNumber numberWithDouble:self.currentLocation.coordinate.longitude];
+    gpsCoord.uuid = @"phone";
+    gpsCoord.lat = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.latitude];
+    gpsCoord.lon = [NSString stringWithFormat:@"%f", self.currentLocation.coordinate.longitude];
     [GpsDAO postGpsCoordinate:gpsCoord withCompletion:^(RKMappingResult *mappingResult) {
         NSLog(@"Sent realtime gps data with result: %@", mappingResult);
     } andFailure:^(NSError *error) {

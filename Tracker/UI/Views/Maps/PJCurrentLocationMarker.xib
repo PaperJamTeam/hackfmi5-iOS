@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map-pointer" translatesAutoresizingMaskIntoConstraints="NO" id="3Xw-5G-1m2">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map-pointer-2" translatesAutoresizingMaskIntoConstraints="NO" id="Mey-jt-ccQ">
                     <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                 </imageView>
             </subviews>
@@ -20,6 +20,6 @@
         </view>
     </objects>
     <resources>
-        <image name="map-pointer" width="32" height="32"/>
+        <image name="map-pointer-2" width="100" height="100"/>
     </resources>
 </document>
