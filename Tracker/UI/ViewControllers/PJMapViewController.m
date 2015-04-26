@@ -73,23 +73,23 @@
         [theViewC addLayer:layer];
     }
     
-    // Add world map
-    {
-        MaplyMBTileSource *tileSource =
-        [[MaplyMBTileSource alloc] initWithMBTiles:@"geography-class_medres"];
-        
-        // set up the layer
-        MaplyQuadImageTilesLayer *layer =
-        [[MaplyQuadImageTilesLayer alloc] initWithCoordSystem:tileSource.coordSys
-                                                   tileSource:tileSource];
-        layer.requireElev = false;
-        layer.waitLoad = false;
-        layer.drawPriority = 0;
-        layer.singleLevelLoading = false;
-        [theViewC addLayer:layer];
-    }
+//    // Add world map
+//    {
+//        MaplyMBTileSource *tileSource =
+//        [[MaplyMBTileSource alloc] initWithMBTiles:@"geography-class_medres"];
+//        
+//        // set up the layer
+//        MaplyQuadImageTilesLayer *layer =
+//        [[MaplyQuadImageTilesLayer alloc] initWithCoordSystem:tileSource.coordSys
+//                                                   tileSource:tileSource];
+//        layer.requireElev = false;
+//        layer.waitLoad = false;
+//        layer.drawPriority = 0;
+//        layer.singleLevelLoading = false;
+//        [theViewC addLayer:layer];
+//    }
 
-    mapViewC.height = 0.01;
+    mapViewC.height = 0.001;
     [mapViewC animateToPosition:MaplyCoordinateMakeWithDegrees(23.3306,42.6744)
                                time:1.0];
     
