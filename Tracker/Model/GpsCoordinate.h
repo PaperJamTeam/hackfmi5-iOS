@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface GpsCoordinate : NSObject
-@property(strong, nonatomic) NSString *deviceId;
-@property(strong, nonatomic) NSNumber *longitude;
-@property(strong, nonatomic) NSNumber *latitude;
+@property(strong, nonatomic) NSString *uuid;
+@property(strong, nonatomic) NSString *lon;
+@property(strong, nonatomic) NSString *lat;
 @end
