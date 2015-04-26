@@ -41,6 +41,8 @@
 		937E12BC1AEC745900C86BE4 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 937E12B51AEC745400C86BE4 /* libRestKit.a */; };
 		938D594E1AEB8FCD008A2A49 /* PJMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594B1AEB8FCD008A2A49 /* PJMapViewController.m */; };
 		938D594F1AEB8FCD008A2A49 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938D594D1AEB8FCD008A2A49 /* SecondViewController.m */; };
+		93940BF91AECEA1C0028FCBD /* GpsDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 93940BF81AECEA1C0028FCBD /* GpsDAO.m */; };
+		93940C001AECF0E80028FCBD /* GpsCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93940BFF1AECF0E80028FCBD /* GpsCoordinate.m */; };
 		939D95F61AEB7B4000BFDC21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F51AEB7B4000BFDC21 /* main.m */; };
 		939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 939D95F81AEB7B4000BFDC21 /* AppDelegate.m */; };
 		939D96041AEB7B4000BFDC21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939D96031AEB7B4000BFDC21 /* Images.xcassets */; };
@@ -172,6 +174,10 @@
 		938D594B1AEB8FCD008A2A49 /* PJMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PJMapViewController.m; path = UI/ViewControllers/PJMapViewController.m; sourceTree = "<group>"; };
 		938D594C1AEB8FCD008A2A49 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = UI/ViewControllers/SecondViewController.h; sourceTree = "<group>"; };
 		938D594D1AEB8FCD008A2A49 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = UI/ViewControllers/SecondViewController.m; sourceTree = "<group>"; };
+		93940BF71AECEA1C0028FCBD /* GpsDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GpsDAO.h; path = Rest/GpsDAO.h; sourceTree = "<group>"; };
+		93940BF81AECEA1C0028FCBD /* GpsDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GpsDAO.m; path = Rest/GpsDAO.m; sourceTree = "<group>"; };
+		93940BFE1AECF0E80028FCBD /* GpsCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GpsCoordinate.h; path = Model/GpsCoordinate.h; sourceTree = "<group>"; };
+		93940BFF1AECF0E80028FCBD /* GpsCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GpsCoordinate.m; path = Model/GpsCoordinate.m; sourceTree = "<group>"; };
 		939D95F01AEB7B4000BFDC21 /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939D95F41AEB7B4000BFDC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		939D95F51AEB7B4000BFDC21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -320,6 +326,8 @@
 			children = (
 				9344972D1AEC7D830037C0A7 /* TrackDAO.h */,
 				9344972E1AEC7D830037C0A7 /* TrackDAO.m */,
+				93940BF71AECEA1C0028FCBD /* GpsDAO.h */,
+				93940BF81AECEA1C0028FCBD /* GpsDAO.m */,
 			);
 			name = Rest;
 			sourceTree = "<group>";
@@ -346,6 +354,8 @@
 			children = (
 				937E11F81AEC6B8400C86BE4 /* Track.h */,
 				937E11F91AEC6B8400C86BE4 /* Track.m */,
+				93940BFE1AECF0E80028FCBD /* GpsCoordinate.h */,
+				93940BFF1AECF0E80028FCBD /* GpsCoordinate.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -780,6 +790,7 @@
 				A7EE4C6A1AEBE4C50062D775 /* AddNewTrackViewController.m in Sources */,
 				939D95F91AEB7B4000BFDC21 /* AppDelegate.m in Sources */,
 				F80D1E901AECDE5500A142EC /* AddNoteTableViewCell.m in Sources */,
+				93940BF91AECEA1C0028FCBD /* GpsDAO.m in Sources */,
 				A7EE4C7E1AEC01100062D775 /* selectInsertTypeViewController.m in Sources */,
 				938D594E1AEB8FCD008A2A49 /* PJMapViewController.m in Sources */,
 				9341FCD51AEC492600307BC1 /* PJTrackDetailsViewController.m in Sources */,
@@ -789,6 +800,7 @@
 				F83D80961AEBC04800F31961 /* PJCoreDataManager.m in Sources */,
 				9341FCB41AEC470200307BC1 /* PJCurrentLocationMarkerView.m in Sources */,
 				A7EE4C6F1AEBE7170062D775 /* NewLandmarkTableViewCell.m in Sources */,
+				93940C001AECF0E80028FCBD /* GpsCoordinate.m in Sources */,
 				A7EE4C831AEC23480062D775 /* LandmarkPhotosTableViewCell.m in Sources */,
 				F80D1E921AECDE5500A142EC /* AddNoteViewController.m in Sources */,
 				9341FCAB1AEC46CD00307BC1 /* ALView+PureLayout.m in Sources */,
