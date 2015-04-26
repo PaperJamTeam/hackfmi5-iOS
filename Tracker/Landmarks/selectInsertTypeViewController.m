@@ -23,6 +23,7 @@
     self.navigationItem.title = @"Choose what to add";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(back)];
     self.navigationItem.leftBarButtonItem = backButton;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismiss) name:@"closeAddNote" object:nil];
 
 }
 
@@ -71,6 +72,11 @@
     
 }
 
+-(void)dismiss
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
 - (IBAction)back
 {
     [self dismissViewControllerAnimated:YES completion:nil]; // ios 6
@@ -91,6 +97,11 @@
 }
 - (IBAction)backButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

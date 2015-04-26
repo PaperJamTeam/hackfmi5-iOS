@@ -30,12 +30,16 @@
 }
 
 - (IBAction)didPressBack:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"closeAddNote" object:nil];
 }
 
 - (IBAction)didPressDone:(id)sender {
     [self.delegate addNoteWithTitle:_titleField.text andText:_textView.text];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"closeAddNote" object:nil];
 }
 
 /*
